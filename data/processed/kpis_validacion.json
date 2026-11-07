@@ -1,0 +1,1709 @@
+{
+ "calidad": {
+  "filas_movies": 16000,
+  "filas_tv": 16000,
+  "ids_duplicados_tv": 9,
+  "ids_compartidos_entre_datasets": 397,
+  "duration_nula_movies": 16000,
+  "duration_valores_tv": {
+   "1 Seasons": 16000
+  },
+  "rating_igual_vote_average_%": 100.0,
+  "nulos_movies": {
+   "director": 132,
+   "cast": 204,
+   "country": 466,
+   "duration": 16000,
+   "genres": 107,
+   "description": 132
+  },
+  "nulos_tv": {
+   "director": 10965,
+   "cast": 1157,
+   "country": 1797,
+   "genres": 974,
+   "description": 3206
+  },
+  "sin_votos_movies": 894,
+  "sin_votos_tv": 3674,
+  "budget_0": 11153,
+  "revenue_0": 10355,
+  "budget_entre_1_y_9999": 85,
+  "revenue_entre_1_y_9999": 139,
+  "titulos_por_anio": "1.000 películas y 1.000 series por año (2010–2025)",
+  "filas_integradas": 31991,
+  "peliculas_financiero_valido": 3492
+ },
+ "catalogo": {
+  "total": 31991,
+  "peliculas": 16000,
+  "series": 15991,
+  "paises": 147,
+  "idiomas": 83,
+  "generos": 22,
+  "periodo": "2010–2025"
+ },
+ "popularidad": {
+  "media_total": 42.63,
+  "mediana_total": 22.07,
+  "mediana_pelicula": 10.91,
+  "mediana_serie": 36.2,
+  "media_pelicula": 20.38,
+  "media_serie": 64.88
+ },
+ "valoracion": {
+  "promedio_total": 6.63,
+  "promedio_pelicula": 6.31,
+  "promedio_serie": 7.02,
+  "pct_alta_o_excelente": 42.0,
+  "estrellas": 3832,
+  "pct_estrellas": 12.0,
+  "estrellas_pelicula": 2034,
+  "estrellas_serie": 1798,
+  "spearman_pop_val": 0.322,
+  "segmentos": {
+   "Media (5–6,9)": 13687,
+   "Alta (7–7,9)": 7678,
+   "Sin votos": 4560,
+   "Excelente (≥8)": 3844,
+   "Baja (<5)": 2222
+  }
+ },
+ "generos": [
+  {
+   "genero": "Drama",
+   "titulos": 14769,
+   "pop_med": 22.68,
+   "val": 6.75
+  },
+  {
+   "genero": "Comedia",
+   "titulos": 9105,
+   "pop_med": 21.92,
+   "val": 6.66
+  },
+  {
+   "genero": "Acción y Aventura",
+   "titulos": 6145,
+   "pop_med": 21.18,
+   "val": 6.64
+  },
+  {
+   "genero": "Ciencia Ficción y Fantasía",
+   "titulos": 4688,
+   "pop_med": 23.78,
+   "val": 6.74
+  },
+  {
+   "genero": "Animación",
+   "titulos": 4069,
+   "pop_med": 26.94,
+   "val": 7.17
+  },
+  {
+   "genero": "Suspenso",
+   "titulos": 3769,
+   "pop_med": 12.35,
+   "val": 6.04
+  },
+  {
+   "genero": "Crimen",
+   "titulos": 3203,
+   "pop_med": 21.49,
+   "val": 6.73
+  },
+  {
+   "genero": "Familiar",
+   "titulos": 3014,
+   "pop_med": 26.12,
+   "val": 6.82
+  },
+  {
+   "genero": "Misterio",
+   "titulos": 2574,
+   "pop_med": 22.8,
+   "val": 6.71
+  },
+  {
+   "genero": "Romance",
+   "titulos": 2571,
+   "pop_med": 10.63,
+   "val": 6.32
+  },
+  {
+   "genero": "Terror",
+   "titulos": 2425,
+   "pop_med": 11.41,
+   "val": 5.72
+  },
+  {
+   "genero": "Documental",
+   "titulos": 1825,
+   "pop_med": 15.05,
+   "val": 7.24
+  },
+  {
+   "genero": "Reality",
+   "titulos": 1630,
+   "pop_med": 40.76,
+   "val": 6.86
+  },
+  {
+   "genero": "Infantil",
+   "titulos": 835,
+   "pop_med": 40.97,
+   "val": 7.2
+  },
+  {
+   "genero": "Bélico y Política",
+   "titulos": 743,
+   "pop_med": 19.57,
+   "val": 6.94
+  },
+  {
+   "genero": "Historia",
+   "titulos": 732,
+   "pop_med": 11.35,
+   "val": 6.77
+  },
+  {
+   "genero": "Talk Show",
+   "titulos": 654,
+   "pop_med": 51.24,
+   "val": 6.45
+  },
+  {
+   "genero": "Telenovela",
+   "titulos": 631,
+   "pop_med": 88.4,
+   "val": 6.25
+  },
+  {
+   "genero": "Película para TV",
+   "titulos": 628,
+   "pop_med": 8.16,
+   "val": 6.26
+  },
+  {
+   "genero": "Música",
+   "titulos": 488,
+   "pop_med": 9.75,
+   "val": 6.96
+  },
+  {
+   "genero": "Western",
+   "titulos": 154,
+   "pop_med": 13.05,
+   "val": 6.37
+  },
+  {
+   "genero": "Noticias",
+   "titulos": 113,
+   "pop_med": 53.56,
+   "val": 6.26
+  },
+  {
+   "genero": "Sin información",
+   "titulos": 99,
+   "pop_med": 30.79,
+   "val": 5.99
+  }
+ ],
+ "estrella_por_genero": {
+  "Historia": 24.6,
+  "Animación": 24.4,
+  "Ciencia Ficción y Fantasía": 22.5,
+  "Bélico y Política": 19.8,
+  "Acción y Aventura": 19.6,
+  "Música": 19.5,
+  "Western": 17.5,
+  "Crimen": 16.8,
+  "Familiar": 16.5,
+  "Misterio": 16.0,
+  "Drama": 15.2,
+  "Telenovela": 14.4,
+  "Comedia": 13.2,
+  "Romance": 13.1,
+  "Infantil": 10.3,
+  "Suspenso": 8.8,
+  "Película para TV": 8.8,
+  "Documental": 6.7,
+  "Terror": 4.6,
+  "Reality": 2.2,
+  "Sin información": 2.0,
+  "Noticias": 1.8,
+  "Talk Show": 1.7
+ },
+ "generos_por_tipo": [
+  {
+   "genero": "Acción y Aventura",
+   "tipo": "Película",
+   "n": 4157,
+   "pop_med": 14.21,
+   "val": 6.3
+  },
+  {
+   "genero": "Acción y Aventura",
+   "tipo": "Serie",
+   "n": 1988,
+   "pop_med": 39.0,
+   "val": 7.4
+  },
+  {
+   "genero": "Animación",
+   "tipo": "Película",
+   "n": 1579,
+   "pop_med": 13.8,
+   "val": 6.94
+  },
+  {
+   "genero": "Animación",
+   "tipo": "Serie",
+   "n": 2490,
+   "pop_med": 36.06,
+   "val": 7.33
+  },
+  {
+   "genero": "Bélico y Política",
+   "tipo": "Película",
+   "n": 420,
+   "pop_med": 11.66,
+   "val": 6.63
+  },
+  {
+   "genero": "Bélico y Política",
+   "tipo": "Serie",
+   "n": 323,
+   "pop_med": 34.65,
+   "val": 7.48
+  },
+  {
+   "genero": "Ciencia Ficción y Fantasía",
+   "tipo": "Película",
+   "n": 2730,
+   "pop_med": 14.07,
+   "val": 6.3
+  },
+  {
+   "genero": "Ciencia Ficción y Fantasía",
+   "tipo": "Serie",
+   "n": 1958,
+   "pop_med": 38.05,
+   "val": 7.39
+  },
+  {
+   "genero": "Comedia",
+   "tipo": "Película",
+   "n": 4533,
+   "pop_med": 10.52,
+   "val": 6.3
+  },
+  {
+   "genero": "Comedia",
+   "tipo": "Serie",
+   "n": 4572,
+   "pop_med": 36.52,
+   "val": 7.06
+  },
+  {
+   "genero": "Crimen",
+   "tipo": "Película",
+   "n": 1738,
+   "pop_med": 11.87,
+   "val": 6.35
+  },
+  {
+   "genero": "Crimen",
+   "tipo": "Serie",
+   "n": 1465,
+   "pop_med": 36.65,
+   "val": 7.21
+  },
+  {
+   "genero": "Documental",
+   "tipo": "Película",
+   "n": 916,
+   "pop_med": 8.36,
+   "val": 7.1
+  },
+  {
+   "genero": "Documental",
+   "tipo": "Serie",
+   "n": 909,
+   "pop_med": 30.34,
+   "val": 7.41
+  },
+  {
+   "genero": "Drama",
+   "tipo": "Película",
+   "n": 6910,
+   "pop_med": 10.51,
+   "val": 6.46
+  },
+  {
+   "genero": "Drama",
+   "tipo": "Serie",
+   "n": 7859,
+   "pop_med": 36.92,
+   "val": 7.06
+  },
+  {
+   "genero": "Familiar",
+   "tipo": "Película",
+   "n": 1472,
+   "pop_med": 12.9,
+   "val": 6.68
+  },
+  {
+   "genero": "Familiar",
+   "tipo": "Serie",
+   "n": 1542,
+   "pop_med": 46.39,
+   "val": 6.98
+  },
+  {
+   "genero": "Historia",
+   "tipo": "Película",
+   "n": 732,
+   "pop_med": 11.35,
+   "val": 6.77
+  },
+  {
+   "genero": "Infantil",
+   "tipo": "Serie",
+   "n": 835,
+   "pop_med": 40.97,
+   "val": 7.2
+  },
+  {
+   "genero": "Misterio",
+   "tipo": "Película",
+   "n": 1242,
+   "pop_med": 11.93,
+   "val": 6.22
+  },
+  {
+   "genero": "Misterio",
+   "tipo": "Serie",
+   "n": 1332,
+   "pop_med": 34.4,
+   "val": 7.21
+  },
+  {
+   "genero": "Música",
+   "tipo": "Película",
+   "n": 488,
+   "pop_med": 9.75,
+   "val": 6.96
+  },
+  {
+   "genero": "Noticias",
+   "tipo": "Serie",
+   "n": 113,
+   "pop_med": 53.56,
+   "val": 6.26
+  },
+  {
+   "genero": "Película para TV",
+   "tipo": "Película",
+   "n": 628,
+   "pop_med": 8.16,
+   "val": 6.26
+  },
+  {
+   "genero": "Reality",
+   "tipo": "Serie",
+   "n": 1630,
+   "pop_med": 40.76,
+   "val": 6.86
+  },
+  {
+   "genero": "Romance",
+   "tipo": "Película",
+   "n": 2571,
+   "pop_med": 10.63,
+   "val": 6.32
+  },
+  {
+   "genero": "Sin información",
+   "tipo": "Serie",
+   "n": 99,
+   "pop_med": 30.79,
+   "val": 5.99
+  },
+  {
+   "genero": "Suspenso",
+   "tipo": "Película",
+   "n": 3769,
+   "pop_med": 12.35,
+   "val": 6.04
+  },
+  {
+   "genero": "Talk Show",
+   "tipo": "Serie",
+   "n": 654,
+   "pop_med": 51.24,
+   "val": 6.45
+  },
+  {
+   "genero": "Telenovela",
+   "tipo": "Serie",
+   "n": 631,
+   "pop_med": 88.4,
+   "val": 6.25
+  },
+  {
+   "genero": "Terror",
+   "tipo": "Película",
+   "n": 2425,
+   "pop_med": 11.41,
+   "val": 5.72
+  },
+  {
+   "genero": "Western",
+   "tipo": "Película",
+   "n": 126,
+   "pop_med": 11.26,
+   "val": 6.19
+  },
+  {
+   "genero": "Western",
+   "tipo": "Serie",
+   "n": 28,
+   "pop_med": 40.79,
+   "val": 7.26
+  }
+ ],
+ "paises_top15": [
+  {
+   "pais": "United States of America",
+   "titulos": 10955,
+   "pop_med": 18.03,
+   "val": 6.49
+  },
+  {
+   "pais": "Japan",
+   "titulos": 2869,
+   "pop_med": 24.38,
+   "val": 7.17
+  },
+  {
+   "pais": "United Kingdom",
+   "titulos": 2608,
+   "pop_med": 16.77,
+   "val": 6.55
+  },
+  {
+   "pais": "China",
+   "titulos": 2399,
+   "pop_med": 29.42,
+   "val": 7.05
+  },
+  {
+   "pais": "South Korea",
+   "titulos": 2174,
+   "pop_med": 25.82,
+   "val": 6.66
+  },
+  {
+   "pais": "France",
+   "titulos": 2108,
+   "pop_med": 11.27,
+   "val": 6.48
+  },
+  {
+   "pais": "Canada",
+   "titulos": 1715,
+   "pop_med": 18.93,
+   "val": 6.35
+  },
+  {
+   "pais": "Germany",
+   "titulos": 1160,
+   "pop_med": 16.74,
+   "val": 6.58
+  },
+  {
+   "pais": "India",
+   "titulos": 912,
+   "pop_med": 18.37,
+   "val": 6.53
+  },
+  {
+   "pais": "Spain",
+   "titulos": 822,
+   "pop_med": 15.28,
+   "val": 6.44
+  },
+  {
+   "pais": "Belgium",
+   "titulos": 646,
+   "pop_med": 11.85,
+   "val": 6.51
+  },
+  {
+   "pais": "Italy",
+   "titulos": 609,
+   "pop_med": 10.82,
+   "val": 6.47
+  },
+  {
+   "pais": "Mexico",
+   "titulos": 568,
+   "pop_med": 30.28,
+   "val": 6.72
+  },
+  {
+   "pais": "Philippines",
+   "titulos": 536,
+   "pop_med": 51.09,
+   "val": 6.17
+  },
+  {
+   "pais": "Hong Kong",
+   "titulos": 479,
+   "pop_med": 19.09,
+   "val": 6.77
+  }
+ ],
+ "paises_mejor_val_min300": [
+  {
+   "pais": "Japan",
+   "titulos": 2869,
+   "pop_med": 24.38,
+   "val": 7.17
+  },
+  {
+   "pais": "Thailand",
+   "titulos": 304,
+   "pop_med": 22.86,
+   "val": 7.1
+  },
+  {
+   "pais": "China",
+   "titulos": 2399,
+   "pop_med": 29.42,
+   "val": 7.05
+  },
+  {
+   "pais": "Brazil",
+   "titulos": 433,
+   "pop_med": 29.88,
+   "val": 6.92
+  },
+  {
+   "pais": "Turkey",
+   "titulos": 407,
+   "pop_med": 32.93,
+   "val": 6.91
+  },
+  {
+   "pais": "Russia",
+   "titulos": 423,
+   "pop_med": 19.36,
+   "val": 6.86
+  },
+  {
+   "pais": "Hong Kong",
+   "titulos": 479,
+   "pop_med": 19.09,
+   "val": 6.77
+  },
+  {
+   "pais": "Mexico",
+   "titulos": 568,
+   "pop_med": 30.28,
+   "val": 6.72
+  },
+  {
+   "pais": "Sweden",
+   "titulos": 318,
+   "pop_med": 13.72,
+   "val": 6.71
+  },
+  {
+   "pais": "South Korea",
+   "titulos": 2174,
+   "pop_med": 25.82,
+   "val": 6.66
+  }
+ ],
+ "idiomas_top12": [
+  {
+   "idioma": "Inglés",
+   "titulos": 13969,
+   "pop_med": 17.03,
+   "val": 6.45
+  },
+  {
+   "idioma": "Chino mandarín",
+   "titulos": 2834,
+   "pop_med": 29.47,
+   "val": 7.07
+  },
+  {
+   "idioma": "Japonés",
+   "titulos": 2784,
+   "pop_med": 24.29,
+   "val": 7.2
+  },
+  {
+   "idioma": "Coreano",
+   "titulos": 2240,
+   "pop_med": 25.77,
+   "val": 6.62
+  },
+  {
+   "idioma": "Español",
+   "titulos": 1646,
+   "pop_med": 27.44,
+   "val": 6.4
+  },
+  {
+   "idioma": "Francés",
+   "titulos": 1639,
+   "pop_med": 12.16,
+   "val": 6.4
+  },
+  {
+   "idioma": "Alemán",
+   "titulos": 730,
+   "pop_med": 25.46,
+   "val": 6.69
+  },
+  {
+   "idioma": "Hindi",
+   "titulos": 635,
+   "pop_med": 24.51,
+   "val": 6.52
+  },
+  {
+   "idioma": "Tagalo",
+   "titulos": 525,
+   "pop_med": 52.05,
+   "val": 6.15
+  },
+  {
+   "idioma": "Portugués",
+   "titulos": 483,
+   "pop_med": 35.99,
+   "val": 6.81
+  },
+  {
+   "idioma": "Ruso",
+   "titulos": 437,
+   "pop_med": 21.95,
+   "val": 6.96
+  },
+  {
+   "idioma": "Italiano",
+   "titulos": 436,
+   "pop_med": 9.34,
+   "val": 6.55
+  }
+ ],
+ "pct_ingles_por_anio": {
+  "Película": {
+   "2010": 60.6,
+   "2011": 62.9,
+   "2012": 61.7,
+   "2013": 63.4,
+   "2014": 65.0,
+   "2015": 63.4,
+   "2016": 60.3,
+   "2017": 61.5,
+   "2018": 59.1,
+   "2019": 57.1,
+   "2020": 58.6,
+   "2021": 56.5,
+   "2022": 59.6,
+   "2023": 55.0,
+   "2024": 53.8,
+   "2025": 54.9
+  },
+  "Serie": {
+   "2010": 31.9,
+   "2011": 29.3,
+   "2012": 28.3,
+   "2013": 28.8,
+   "2014": 29.2,
+   "2015": 29.1,
+   "2016": 28.2,
+   "2017": 27.6,
+   "2018": 26.1,
+   "2019": 29.2,
+   "2020": 29.3,
+   "2021": 27.0,
+   "2022": 25.9,
+   "2023": 20.8,
+   "2024": 23.8,
+   "2025": 29.3
+  }
+ },
+ "top_popular_pelis": [
+  {
+   "title": "The Gorge",
+   "tipo": "Película",
+   "release_year": 2025,
+   "popularity": 3876.01,
+   "valoracion": 7.78,
+   "valoracion_ponderada": 7.62,
+   "vote_count": 1572
+  },
+  {
+   "title": "Flight Risk",
+   "tipo": "Película",
+   "release_year": 2025,
+   "popularity": 3320.62,
+   "valoracion": 6.0,
+   "valoracion_ponderada": 6.11,
+   "vote_count": 350
+  },
+  {
+   "title": "Mufasa: The Lion King",
+   "tipo": "Película",
+   "release_year": 2024,
+   "popularity": 2643.63,
+   "valoracion": 7.47,
+   "valoracion_ponderada": 7.33,
+   "vote_count": 1497
+  },
+  {
+   "title": "Sonic the Hedgehog 3",
+   "tipo": "Película",
+   "release_year": 2024,
+   "popularity": 2402.5,
+   "valoracion": 7.74,
+   "valoracion_ponderada": 7.61,
+   "vote_count": 2047
+  },
+  {
+   "title": "Moana 2",
+   "tipo": "Película",
+   "release_year": 2024,
+   "popularity": 2347.01,
+   "valoracion": 7.1,
+   "valoracion_ponderada": 7.02,
+   "vote_count": 1758
+  },
+  {
+   "title": "Amaran",
+   "tipo": "Película",
+   "release_year": 2024,
+   "popularity": 1780.29,
+   "valoracion": 7.44,
+   "valoracion_ponderada": 6.84,
+   "vote_count": 175
+  },
+  {
+   "title": "Captain America: Brave New World",
+   "tipo": "Película",
+   "release_year": 2025,
+   "popularity": 1495.72,
+   "valoracion": 6.18,
+   "valoracion_ponderada": 6.2,
+   "vote_count": 833
+  },
+  {
+   "title": "Companion",
+   "tipo": "Película",
+   "release_year": 2025,
+   "popularity": 1283.36,
+   "valoracion": 7.0,
+   "valoracion_ponderada": 6.83,
+   "vote_count": 610
+  },
+  {
+   "title": "Panda Plan",
+   "tipo": "Película",
+   "release_year": 2024,
+   "popularity": 1214.51,
+   "valoracion": 7.06,
+   "valoracion_ponderada": 6.62,
+   "vote_count": 146
+  },
+  {
+   "title": "Kraven the Hunter",
+   "tipo": "Película",
+   "release_year": 2024,
+   "popularity": 1195.88,
+   "valoracion": 6.7,
+   "valoracion_ponderada": 6.65,
+   "vote_count": 1333
+  }
+ ],
+ "top_popular_series": [
+  {
+   "title": "The Late Show with Stephen Colbert",
+   "tipo": "Serie",
+   "release_year": 2015,
+   "popularity": 6421.92,
+   "valoracion": 6.49,
+   "valoracion_ponderada": 6.71,
+   "vote_count": 288
+  },
+  {
+   "title": "The Tonight Show Starring Jimmy Fallon",
+   "tipo": "Serie",
+   "release_year": 2014,
+   "popularity": 4925.25,
+   "valoracion": 5.8,
+   "valoracion_ponderada": 6.27,
+   "vote_count": 321
+  },
+  {
+   "title": "Good Mythical Morning",
+   "tipo": "Serie",
+   "release_year": 2012,
+   "popularity": 3414.47,
+   "valoracion": 6.8,
+   "valoracion_ponderada": 6.97,
+   "vote_count": 67
+  },
+  {
+   "title": "Chronicles of the Sun",
+   "tipo": "Serie",
+   "release_year": 2018,
+   "popularity": 2987.48,
+   "valoracion": 6.8,
+   "valoracion_ponderada": 6.94,
+   "vote_count": 117
+  },
+  {
+   "title": "Volta por Cima",
+   "tipo": "Serie",
+   "release_year": 2024,
+   "popularity": 2885.72,
+   "valoracion": 5.78,
+   "valoracion_ponderada": 6.93,
+   "vote_count": 16
+  },
+  {
+   "title": "She's the One",
+   "tipo": "Serie",
+   "release_year": 2024,
+   "popularity": 2862.87,
+   "valoracion": 8.1,
+   "valoracion_ponderada": 7.07,
+   "vote_count": 9
+  },
+  {
+   "title": "Crazy About You",
+   "tipo": "Serie",
+   "release_year": 2024,
+   "popularity": 2442.24,
+   "valoracion": 5.2,
+   "valoracion_ponderada": 6.89,
+   "vote_count": 16
+  },
+  {
+   "title": "La Casa de los Famosos Colombia",
+   "tipo": "Serie",
+   "release_year": 2024,
+   "popularity": 2398.16,
+   "valoracion": 6.6,
+   "valoracion_ponderada": 6.97,
+   "vote_count": 27
+  },
+  {
+   "title": "Late Night with Seth Meyers",
+   "tipo": "Serie",
+   "release_year": 2014,
+   "popularity": 2395.02,
+   "valoracion": 5.4,
+   "valoracion_ponderada": 6.49,
+   "vote_count": 98
+  },
+  {
+   "title": "GH dúo",
+   "tipo": "Serie",
+   "release_year": 2019,
+   "popularity": 2379.88,
+   "valoracion": 6.5,
+   "valoracion_ponderada": 7.01,
+   "vote_count": 4
+  }
+ ],
+ "top_val_pelis": [
+  {
+   "title": "Interstellar",
+   "tipo": "Película",
+   "release_year": 2014,
+   "popularity": 288.19,
+   "valoracion": 8.5,
+   "valoracion_ponderada": 8.49,
+   "vote_count": 36625
+  },
+  {
+   "title": "Parasite",
+   "tipo": "Película",
+   "release_year": 2019,
+   "popularity": 130.55,
+   "valoracion": 8.5,
+   "valoracion_ponderada": 8.48,
+   "vote_count": 18728
+  },
+  {
+   "title": "Your Name.",
+   "tipo": "Película",
+   "release_year": 2016,
+   "popularity": 93.94,
+   "valoracion": 8.5,
+   "valoracion_ponderada": 8.46,
+   "vote_count": 11613
+  },
+  {
+   "title": "Whiplash",
+   "tipo": "Película",
+   "release_year": 2014,
+   "popularity": 97.31,
+   "valoracion": 8.4,
+   "valoracion_ponderada": 8.37,
+   "vote_count": 15418
+  },
+  {
+   "title": "Spider-Man: Into the Spider-Verse",
+   "tipo": "Película",
+   "release_year": 2018,
+   "popularity": 127.26,
+   "valoracion": 8.4,
+   "valoracion_ponderada": 8.37,
+   "vote_count": 15936
+  },
+  {
+   "title": "Inception",
+   "tipo": "Película",
+   "release_year": 2010,
+   "popularity": 156.24,
+   "valoracion": 8.37,
+   "valoracion_ponderada": 8.36,
+   "vote_count": 37119
+  },
+  {
+   "title": "A Silent Voice: The Movie",
+   "tipo": "Película",
+   "release_year": 2016,
+   "popularity": 49.27,
+   "valoracion": 8.4,
+   "valoracion_ponderada": 8.3,
+   "vote_count": 4036
+  },
+  {
+   "title": "Spider-Man: Across the Spider-Verse",
+   "tipo": "Película",
+   "release_year": 2023,
+   "popularity": 159.51,
+   "valoracion": 8.35,
+   "valoracion_ponderada": 8.29,
+   "vote_count": 7346
+  },
+  {
+   "title": "The Intouchables",
+   "tipo": "Película",
+   "release_year": 2011,
+   "popularity": 72.09,
+   "valoracion": 8.27,
+   "valoracion_ponderada": 8.25,
+   "vote_count": 17454
+  },
+  {
+   "title": "Gabriel's Inferno",
+   "tipo": "Película",
+   "release_year": 2020,
+   "popularity": 13.41,
+   "valoracion": 8.41,
+   "valoracion_ponderada": 8.25,
+   "vote_count": 2417
+  }
+ ],
+ "top_val_series": [
+  {
+   "title": "Arcane",
+   "tipo": "Serie",
+   "release_year": 2021,
+   "popularity": 191.82,
+   "valoracion": 8.8,
+   "valoracion_ponderada": 8.73,
+   "vote_count": 4932
+  },
+  {
+   "title": "Rick and Morty",
+   "tipo": "Serie",
+   "release_year": 2013,
+   "popularity": 984.07,
+   "valoracion": 8.7,
+   "valoracion_ponderada": 8.67,
+   "vote_count": 9992
+  },
+  {
+   "title": "Attack on Titan",
+   "tipo": "Serie",
+   "release_year": 2013,
+   "popularity": 138.66,
+   "valoracion": 8.7,
+   "valoracion_ponderada": 8.65,
+   "vote_count": 6603
+  },
+  {
+   "title": "Demon Slayer: Kimetsu no Yaiba",
+   "tipo": "Serie",
+   "release_year": 2019,
+   "popularity": 87.33,
+   "valoracion": 8.7,
+   "valoracion_ponderada": 8.65,
+   "vote_count": 6585
+  },
+  {
+   "title": "Better Call Saul",
+   "tipo": "Serie",
+   "release_year": 2015,
+   "popularity": 286.52,
+   "valoracion": 8.7,
+   "valoracion_ponderada": 8.64,
+   "vote_count": 5475
+  },
+  {
+   "title": "Chernobyl",
+   "tipo": "Serie",
+   "release_year": 2019,
+   "popularity": 98.36,
+   "valoracion": 8.68,
+   "valoracion_ponderada": 8.64,
+   "vote_count": 6636
+  },
+  {
+   "title": "Anne with an E",
+   "tipo": "Serie",
+   "release_year": 2017,
+   "popularity": 108.61,
+   "valoracion": 8.7,
+   "valoracion_ponderada": 8.63,
+   "vote_count": 4713
+  },
+  {
+   "title": "Stranger Things",
+   "tipo": "Serie",
+   "release_year": 2016,
+   "popularity": 341.46,
+   "valoracion": 8.6,
+   "valoracion_ponderada": 8.58,
+   "vote_count": 18075
+  },
+  {
+   "title": "INVINCIBLE",
+   "tipo": "Serie",
+   "release_year": 2021,
+   "popularity": 824.06,
+   "valoracion": 8.63,
+   "valoracion_ponderada": 8.56,
+   "vote_count": 4660
+  },
+  {
+   "title": "Hazbin Hotel",
+   "tipo": "Serie",
+   "release_year": 2024,
+   "popularity": 108.12,
+   "valoracion": 8.8,
+   "valoracion_ponderada": 8.55,
+   "vote_count": 1229
+  }
+ ],
+ "top_votos": [
+  {
+   "title": "Inception",
+   "tipo": "Película",
+   "release_year": 2010,
+   "popularity": 156.24,
+   "valoracion": 8.37,
+   "valoracion_ponderada": 8.36,
+   "vote_count": 37119
+  },
+  {
+   "title": "Interstellar",
+   "tipo": "Película",
+   "release_year": 2014,
+   "popularity": 288.19,
+   "valoracion": 8.5,
+   "valoracion_ponderada": 8.49,
+   "vote_count": 36625
+  },
+  {
+   "title": "Deadpool",
+   "tipo": "Película",
+   "release_year": 2016,
+   "popularity": 106.64,
+   "valoracion": 7.62,
+   "valoracion_ponderada": 7.61,
+   "vote_count": 31371
+  },
+  {
+   "title": "The Avengers",
+   "tipo": "Película",
+   "release_year": 2012,
+   "popularity": 186.11,
+   "valoracion": 7.73,
+   "valoracion_ponderada": 7.72,
+   "vote_count": 31285
+  },
+  {
+   "title": "Avengers: Infinity War",
+   "tipo": "Película",
+   "release_year": 2018,
+   "popularity": 285.58,
+   "valoracion": 8.2,
+   "valoracion_ponderada": 8.19,
+   "vote_count": 30231
+  },
+  {
+   "title": "Guardians of the Galaxy",
+   "tipo": "Película",
+   "release_year": 2014,
+   "popularity": 49.4,
+   "valoracion": 7.9,
+   "valoracion_ponderada": 7.89,
+   "vote_count": 28308
+  },
+  {
+   "title": "Django Unchained",
+   "tipo": "Película",
+   "release_year": 2012,
+   "popularity": 60.47,
+   "valoracion": 8.18,
+   "valoracion_ponderada": 8.17,
+   "vote_count": 26532
+  },
+  {
+   "title": "Joker",
+   "tipo": "Película",
+   "release_year": 2019,
+   "popularity": 83.23,
+   "valoracion": 8.1,
+   "valoracion_ponderada": 8.09,
+   "vote_count": 26169
+  },
+  {
+   "title": "Avengers: Endgame",
+   "tipo": "Película",
+   "release_year": 2019,
+   "popularity": 133.26,
+   "valoracion": 8.2,
+   "valoracion_ponderada": 8.19,
+   "vote_count": 26065
+  },
+  {
+   "title": "Game of Thrones",
+   "tipo": "Serie",
+   "release_year": 2011,
+   "popularity": 812.16,
+   "valoracion": 8.5,
+   "valoracion_ponderada": 8.49,
+   "vote_count": 24664
+  }
+ ],
+ "temporal": {
+  "pop_mediana_anio": {
+   "Película": {
+    "2010": 7.68,
+    "2011": 7.92,
+    "2012": 8.89,
+    "2013": 9.35,
+    "2014": 10.33,
+    "2015": 9.56,
+    "2016": 10.31,
+    "2017": 11.09,
+    "2018": 10.99,
+    "2019": 11.03,
+    "2020": 10.25,
+    "2021": 11.19,
+    "2022": 13.27,
+    "2023": 15.98,
+    "2024": 27.68,
+    "2025": 8.65
+   },
+   "Serie": {
+    "2010": 32.39,
+    "2011": 36.97,
+    "2012": 36.2,
+    "2013": 40.22,
+    "2014": 36.52,
+    "2015": 41.85,
+    "2016": 43.02,
+    "2017": 42.85,
+    "2018": 46.76,
+    "2019": 45.92,
+    "2020": 30.26,
+    "2021": 31.22,
+    "2022": 34.56,
+    "2023": 35.5,
+    "2024": 32.81,
+    "2025": 12.68
+   }
+  },
+  "val_anio": {
+   "Película": {
+    "2010": 6.12,
+    "2011": 6.15,
+    "2012": 6.12,
+    "2013": 6.2,
+    "2014": 6.22,
+    "2015": 6.23,
+    "2016": 6.23,
+    "2017": 6.35,
+    "2018": 6.37,
+    "2019": 6.46,
+    "2020": 6.42,
+    "2021": 6.49,
+    "2022": 6.41,
+    "2023": 6.42,
+    "2024": 6.42,
+    "2025": 6.45
+   },
+   "Serie": {
+    "2010": 6.82,
+    "2011": 6.78,
+    "2012": 6.88,
+    "2013": 6.93,
+    "2014": 6.97,
+    "2015": 6.85,
+    "2016": 6.91,
+    "2017": 6.95,
+    "2018": 7.04,
+    "2019": 7.14,
+    "2020": 7.16,
+    "2021": 7.03,
+    "2022": 6.95,
+    "2023": 7.25,
+    "2024": 7.42,
+    "2025": 7.31
+   }
+  },
+  "pct_sin_votos_anio": {
+   "Película": {
+    "2010": 0.1,
+    "2011": 0.1,
+    "2012": 0.2,
+    "2013": 0.2,
+    "2014": 0.2,
+    "2015": 0.4,
+    "2016": 0.5,
+    "2017": 0.6,
+    "2018": 1.1,
+    "2019": 1.9,
+    "2020": 2.9,
+    "2021": 2.4,
+    "2022": 1.1,
+    "2023": 1.3,
+    "2024": 2.9,
+    "2025": 73.5
+   },
+   "Serie": {
+    "2010": 31.5,
+    "2011": 29.0,
+    "2012": 26.8,
+    "2013": 27.5,
+    "2014": 21.9,
+    "2015": 23.1,
+    "2016": 18.5,
+    "2017": 16.3,
+    "2018": 17.0,
+    "2019": 15.8,
+    "2020": 18.5,
+    "2021": 17.2,
+    "2022": 15.5,
+    "2023": 13.0,
+    "2024": 12.7,
+    "2025": 62.9
+   }
+  }
+ },
+ "generos_crecimiento": {
+  "Sin información": -100.0,
+  "Película para TV": -70.7,
+  "Noticias": -58.5,
+  "Telenovela": -41.6,
+  "Infantil": -25.0,
+  "Talk Show": -24.1,
+  "Familiar": -19.7,
+  "Comedia": -17.5,
+  "Reality": -17.2,
+  "Bélico y Política": -14.2,
+  "Romance": -11.3,
+  "Documental": -3.7,
+  "Drama": 5.6,
+  "Western": 7.0,
+  "Animación": 8.2,
+  "Acción y Aventura": 9.4,
+  "Suspenso": 11.8,
+  "Música": 12.2,
+  "Crimen": 17.1,
+  "Ciencia Ficción y Fantasía": 18.3,
+  "Terror": 21.4,
+  "Historia": 28.5,
+  "Misterio": 47.7
+ },
+ "top_directores": {
+  "Don Michael Perez": 21,
+  "Dominic Zapata": 21,
+  "Tyler Perry": 20,
+  "Sam Liu": 18,
+  "Gil Tejada Jr.": 17,
+  "Roel Reiné": 15,
+  "Steven Soderbergh": 15,
+  "Sean McNamara": 15,
+  "Ricky Davao": 15,
+  "Sion Sono": 14
+ },
+ "top_actores": {
+  "Min Do-yoon": 111,
+  "Kana Hanazawa": 97,
+  "Yuki Kaji": 70,
+  "Grey DeLisle": 65,
+  "Yuichi Nakamura": 63,
+  "Takahiro Sakurai": 63,
+  "Natsuki Hanae": 63,
+  "Yoko Hikasa": 62,
+  "Mamoru Miyano": 59,
+  "Saori Hayami": 59
+ },
+ "financiero": {
+  "peliculas_validas": 3492,
+  "pct_de_peliculas": 21.8,
+  "presupuesto_total": 125628417074,
+  "ingresos_totales": 367355105933,
+  "presupuesto_promedio": 35976064,
+  "ingreso_promedio": 105199057,
+  "roi_agregado": 2.92,
+  "roi_mediano": 1.72,
+  "pct_rentables_roi_gt1": 63.7,
+  "spearman_budget_revenue": 0.709,
+  "pearson_log": 0.662
+ },
+ "top_ingresos": [
+  {
+   "title": "Avengers: Endgame",
+   "release_year": 2019,
+   "budget_usd": 356000000.0,
+   "revenue_usd": 2799439100.0,
+   "roi": 7.86
+  },
+  {
+   "title": "Avatar: The Way of Water",
+   "release_year": 2022,
+   "budget_usd": 460000000.0,
+   "revenue_usd": 2320250281.0,
+   "roi": 5.04
+  },
+  {
+   "title": "Star Wars: The Force Awakens",
+   "release_year": 2015,
+   "budget_usd": 245000000.0,
+   "revenue_usd": 2068223624.0,
+   "roi": 8.44
+  },
+  {
+   "title": "Avengers: Infinity War",
+   "release_year": 2018,
+   "budget_usd": 300000000.0,
+   "revenue_usd": 2052415039.0,
+   "roi": 6.84
+  },
+  {
+   "title": "Ne Zha 2",
+   "release_year": 2025,
+   "budget_usd": 80000000.0,
+   "revenue_usd": 1990000000.0,
+   "roi": 24.88
+  },
+  {
+   "title": "Spider-Man: No Way Home",
+   "release_year": 2021,
+   "budget_usd": 200000000.0,
+   "revenue_usd": 1921847111.0,
+   "roi": 9.61
+  },
+  {
+   "title": "Inside Out 2",
+   "release_year": 2024,
+   "budget_usd": 200000000.0,
+   "revenue_usd": 1698863816.0,
+   "roi": 8.49
+  },
+  {
+   "title": "Jurassic World",
+   "release_year": 2015,
+   "budget_usd": 150000000.0,
+   "revenue_usd": 1671537444.0,
+   "roi": 11.14
+  },
+  {
+   "title": "The Lion King",
+   "release_year": 2019,
+   "budget_usd": 260000000.0,
+   "revenue_usd": 1662020819.0,
+   "roi": 6.39
+  },
+  {
+   "title": "The Avengers",
+   "release_year": 2012,
+   "budget_usd": 220000000.0,
+   "revenue_usd": 1518815515.0,
+   "roi": 6.9
+  }
+ ],
+ "top_roi": [
+  {
+   "title": "Dragon Ball Super: Broly",
+   "release_year": 2018,
+   "budget_usd": 1000000.0,
+   "revenue_usd": 125002821.0,
+   "roi": 125.0
+  },
+  {
+   "title": "The Devil Inside",
+   "release_year": 2012,
+   "budget_usd": 1000000.0,
+   "revenue_usd": 101800000.0,
+   "roi": 101.8
+  },
+  {
+   "title": "Lost in Thailand",
+   "release_year": 2012,
+   "budget_usd": 2200000.0,
+   "revenue_usd": 208000000.0,
+   "roi": 94.55
+  },
+  {
+   "title": "Searching",
+   "release_year": 2018,
+   "budget_usd": 1000000.0,
+   "revenue_usd": 75462037.0,
+   "roi": 75.46
+  },
+  {
+   "title": "Insidious",
+   "release_year": 2011,
+   "budget_usd": 1500000.0,
+   "revenue_usd": 100106454.0,
+   "roi": 66.74
+  },
+  {
+   "title": "Unfriended",
+   "release_year": 2014,
+   "budget_usd": 1000000.0,
+   "revenue_usd": 62900000.0,
+   "roi": 62.9
+  },
+  {
+   "title": "Paranormal Activity 2",
+   "release_year": 2010,
+   "budget_usd": 3000000.0,
+   "revenue_usd": 177512032.0,
+   "roi": 59.17
+  },
+  {
+   "title": "Get Out",
+   "release_year": 2017,
+   "budget_usd": 4500000.0,
+   "revenue_usd": 255407969.0,
+   "roi": 56.76
+  },
+  {
+   "title": "Tunnel",
+   "release_year": 2016,
+   "budget_usd": 1000000.0,
+   "revenue_usd": 52444295.0,
+   "roi": 52.44
+  },
+  {
+   "title": "The Last Kumite",
+   "release_year": 2024,
+   "budget_usd": 1303000.0,
+   "revenue_usd": 65000000.0,
+   "roi": 49.88
+  }
+ ],
+ "exitos_bajo_presupuesto": [
+  {
+   "title": "Get Out",
+   "release_year": 2017,
+   "budget_usd": 4500000.0,
+   "revenue_usd": 255407969.0,
+   "roi": 56.76
+  },
+  {
+   "title": "Lost in Thailand",
+   "release_year": 2012,
+   "budget_usd": 2200000.0,
+   "revenue_usd": 208000000.0,
+   "roi": 94.55
+  },
+  {
+   "title": "Paranormal Activity 2",
+   "release_year": 2010,
+   "budget_usd": 3000000.0,
+   "revenue_usd": 177512032.0,
+   "roi": 59.17
+  },
+  {
+   "title": "Lights Out",
+   "release_year": 2016,
+   "budget_usd": 4900000.0,
+   "revenue_usd": 149368835.0,
+   "roi": 30.48
+  },
+  {
+   "title": "Mr. Six",
+   "release_year": 2015,
+   "budget_usd": 250000.0,
+   "revenue_usd": 139191345.0,
+   "roi": 556.77
+  },
+  {
+   "title": "Secret Superstar",
+   "release_year": 2017,
+   "budget_usd": 286284.0,
+   "revenue_usd": 137416709.0,
+   "roi": 480.0
+  },
+  {
+   "title": "Happy Death Day",
+   "release_year": 2017,
+   "budget_usd": 4800000.0,
+   "revenue_usd": 125479266.0,
+   "roi": 26.14
+  },
+  {
+   "title": "Dragon Ball Super: Broly",
+   "release_year": 2018,
+   "budget_usd": 1000000.0,
+   "revenue_usd": 125002821.0,
+   "roi": 125.0
+  },
+  {
+   "title": "The Devil Inside",
+   "release_year": 2012,
+   "budget_usd": 1000000.0,
+   "revenue_usd": 101800000.0,
+   "roi": 101.8
+  },
+  {
+   "title": "Insidious",
+   "release_year": 2011,
+   "budget_usd": 1500000.0,
+   "revenue_usd": 100106454.0,
+   "roi": 66.74
+  }
+ ],
+ "roi_por_genero": [
+  {
+   "genero": "Animación",
+   "n": 284,
+   "roi_med": 2.29,
+   "ingreso_med": 98913517.0
+  },
+  {
+   "genero": "Familiar",
+   "n": 385,
+   "roi_med": 2.18,
+   "ingreso_med": 93251121.0
+  },
+  {
+   "genero": "Terror",
+   "n": 455,
+   "roi_med": 2.15,
+   "ingreso_med": 16861137.0
+  },
+  {
+   "genero": "Comedia",
+   "n": 1141,
+   "roi_med": 2.02,
+   "ingreso_med": 31410151.0
+  },
+  {
+   "genero": "Ciencia Ficción y Fantasía",
+   "n": 733,
+   "roi_med": 1.93,
+   "ingreso_med": 89792502.0
+  },
+  {
+   "genero": "Acción y Aventura",
+   "n": 1317,
+   "roi_med": 1.89,
+   "ingreso_med": 59256423.0
+  },
+  {
+   "genero": "Música",
+   "n": 104,
+   "roi_med": 1.88,
+   "ingreso_med": 28449749.0
+  },
+  {
+   "genero": "Misterio",
+   "n": 282,
+   "roi_med": 1.71,
+   "ingreso_med": 21989355.5
+  },
+  {
+   "genero": "Romance",
+   "n": 481,
+   "roi_med": 1.71,
+   "ingreso_med": 19238073.0
+  },
+  {
+   "genero": "Suspenso",
+   "n": 922,
+   "roi_med": 1.39,
+   "ingreso_med": 18320100.0
+  },
+  {
+   "genero": "Crimen",
+   "n": 494,
+   "roi_med": 1.39,
+   "ingreso_med": 21837458.0
+  },
+  {
+   "genero": "Drama",
+   "n": 1632,
+   "roi_med": 1.3,
+   "ingreso_med": 14685211.5
+  },
+  {
+   "genero": "Bélico y Política",
+   "n": 128,
+   "roi_med": 1.27,
+   "ingreso_med": 15310011.5
+  },
+  {
+   "genero": "Historia",
+   "n": 245,
+   "roi_med": 1.16,
+   "ingreso_med": 23834809.0
+  }
+ ],
+ "roi_por_tramo": [
+  {
+   "tramo": "<5M",
+   "n": "796",
+   "roi_med": "1.64",
+   "pct_rent": "59.42"
+  },
+  {
+   "tramo": "5–20M",
+   "n": "1239",
+   "roi_med": "1.3",
+   "pct_rent": "56.17"
+  },
+  {
+   "tramo": "20–60M",
+   "n": "861",
+   "roi_med": "1.59",
+   "pct_rent": "64.11"
+  },
+  {
+   "tramo": ">60M",
+   "n": "596",
+   "roi_med": "2.58",
+   "pct_rent": "84.73"
+  }
+ ]
+}

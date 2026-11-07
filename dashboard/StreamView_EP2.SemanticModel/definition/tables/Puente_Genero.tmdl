@@ -1,0 +1,31 @@
+table Puente_Genero
+	lineageTag: d5745557-6af0-4c27-a346-126f6f14e0ed
+
+	column id_contenido
+		dataType: string
+		isHidden
+		lineageTag: 8a95d32d-b2c4-4f78-b223-48b5973e50c7
+		summarizeBy: none
+		sourceColumn: id_contenido
+
+	column genero
+		dataType: string
+		lineageTag: 6c93e872-7f15-4250-a58f-6aafcca69fad
+		summarizeBy: none
+		sourceColumn: genero
+
+	partition Puente_Genero = m
+		mode: import
+		source =
+				let
+				Base = Table.SelectColumns(Contenido, {"id_contenido", "genres"}),
+				Lista = Table.TransformColumns(Base, {{"genres", each
+				if _ = null then {"Unknown"} else List.Transform(Text.Split(_, ","), Text.Trim)}}),
+				Expandida = Table.ExpandListColumn(Lista, "genres"),
+				Homologada = Table.TransformColumns(Expandida, {{"genres", each
+				Record.FieldOrDefault(map_Generos, _, _), type text}}),
+				Renombrada = Table.RenameColumns(Homologada, {{"genres", "genero"}}),
+				SinDuplicados = Table.Distinct(Renombrada)
+				in
+				SinDuplicados
+

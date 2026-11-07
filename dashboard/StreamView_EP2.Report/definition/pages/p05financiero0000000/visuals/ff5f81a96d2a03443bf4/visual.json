@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ff5f81a96d2a03443bf4",
+  "position": {
+    "x": 20,
+    "y": 8,
+    "z": 1000,
+    "height": 80,
+    "width": 980,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Financiero Películas",
+                    "textStyle": {
+                      "fontSize": "22pt",
+                      "color": "#0B0B0B",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "¿Qué películas rinden y con qué presupuesto?  (sólo películas con budget y revenue ≥ USD 10.000)  ·  Estreno 2010–2025  ·  Fuente: catálogo StreamView (películas y series)",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#52514E"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

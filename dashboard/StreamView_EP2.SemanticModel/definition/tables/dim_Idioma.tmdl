@@ -1,0 +1,121 @@
+table dim_Idioma
+	lineageTag: e26c8ba2-9998-446e-b957-7c24b5ee6ba0
+
+	column codigo
+		dataType: string
+		lineageTag: 364d64fa-3d03-48b3-be00-88171d45b38c
+		summarizeBy: none
+		sourceColumn: codigo
+
+	column idioma
+		dataType: string
+		lineageTag: 4a20a5ba-9f4f-426f-9471-da73ffc93ee5
+		summarizeBy: none
+		sourceColumn: idioma
+
+	column grupo_idioma
+		dataType: string
+		lineageTag: fa0222ef-0625-417a-ba94-07b60cb9794d
+		summarizeBy: none
+		sourceColumn: grupo_idioma
+
+	partition dim_Idioma = m
+		mode: import
+		source =
+				let
+				Fuente = #table(
+				type table [codigo = text, idioma = text],
+				{
+				{"af", "Afrikáans"},
+				{"am", "Amárico"},
+				{"ar", "Árabe"},
+				{"as", "Asamés"},
+				{"az", "Azerí"},
+				{"bg", "Búlgaro"},
+				{"bn", "Bengalí"},
+				{"bs", "Bosnio"},
+				{"ca", "Catalán"},
+				{"cn", "Cantonés"},
+				{"cs", "Checo"},
+				{"cy", "Galés"},
+				{"da", "Danés"},
+				{"de", "Alemán"},
+				{"dz", "Dzongkha"},
+				{"el", "Griego"},
+				{"en", "Inglés"},
+				{"es", "Español"},
+				{"et", "Estonio"},
+				{"eu", "Euskera"},
+				{"fa", "Persa"},
+				{"fi", "Finés"},
+				{"fr", "Francés"},
+				{"ga", "Irlandés"},
+				{"gl", "Gallego"},
+				{"he", "Hebreo"},
+				{"hi", "Hindi"},
+				{"hr", "Croata"},
+				{"ht", "Criollo haitiano"},
+				{"hu", "Húngaro"},
+				{"hy", "Armenio"},
+				{"id", "Indonesio"},
+				{"is", "Islandés"},
+				{"it", "Italiano"},
+				{"ja", "Japonés"},
+				{"ka", "Georgiano"},
+				{"kk", "Kazajo"},
+				{"kl", "Groenlandés"},
+				{"km", "Jemer"},
+				{"kn", "Canarés"},
+				{"ko", "Coreano"},
+				{"ku", "Kurdo"},
+				{"ky", "Kirguís"},
+				{"la", "Latín"},
+				{"lb", "Luxemburgués"},
+				{"lt", "Lituano"},
+				{"lv", "Letón"},
+				{"mi", "Maorí"},
+				{"mk", "Macedonio"},
+				{"ml", "Malayalam"},
+				{"mn", "Mongol"},
+				{"mr", "Maratí"},
+				{"ms", "Malayo"},
+				{"mt", "Maltés"},
+				{"nb", "Noruego bokmål"},
+				{"ne", "Nepalí"},
+				{"nl", "Neerlandés"},
+				{"no", "Noruego"},
+				{"or", "Oriya"},
+				{"pa", "Panyabí"},
+				{"pl", "Polaco"},
+				{"ps", "Pastún"},
+				{"pt", "Portugués"},
+				{"ro", "Rumano"},
+				{"ru", "Ruso"},
+				{"si", "Cingalés"},
+				{"sk", "Eslovaco"},
+				{"sl", "Esloveno"},
+				{"sr", "Serbio"},
+				{"sv", "Sueco"},
+				{"ta", "Tamil"},
+				{"te", "Telugu"},
+				{"th", "Tailandés"},
+				{"tl", "Tagalo"},
+				{"tr", "Turco"},
+				{"uk", "Ucraniano"},
+				{"ur", "Urdu"},
+				{"vi", "Vietnamita"},
+				{"xx", "Sin idioma"},
+				{"yo", "Yoruba"},
+				{"za", "Zhuang"},
+				{"zh", "Chino mandarín"},
+				{"zu", "Zulú"}
+				}
+				),
+				Familia = Table.AddColumn(Fuente, "grupo_idioma", each
+				if [codigo] = "en" then "Inglés"
+				else if List.Contains({"es", "pt"}, [codigo]) then "Español / Portugués"
+				else if List.Contains({"ja", "ko", "zh", "cn", "th", "tl", "id", "vi", "ms", "hi", "ta", "te", "ml", "kn", "bn", "mr", "pa"}, [codigo]) then "Asiático"
+				else "Otros", type text)
+				in
+				Familia
+

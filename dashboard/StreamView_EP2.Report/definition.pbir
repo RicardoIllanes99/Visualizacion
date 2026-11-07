@@ -1,0 +1,8 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../StreamView_EP2.SemanticModel"
+    }
+  }
+}

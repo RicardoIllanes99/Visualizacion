@@ -1,0 +1,299 @@
+table _Medidas
+	lineageTag: c6ae692f-f5af-4783-99dc-14a09eaed590
+
+	measure 'Total Contenidos' = COUNTROWS ( Contenido )
+		formatString: #,0
+		displayFolder: 01 Catálogo
+		lineageTag: 815bcc91-8531-45bd-899c-ccb1f27be643
+
+	measure 'Total Películas' = CALCULATE ( [Total Contenidos], KEEPFILTERS ( Contenido[tipo] = "Película" ) )
+		formatString: #,0
+		displayFolder: 01 Catálogo
+		lineageTag: 02ed4e28-929e-45a1-b91d-2a289edf25f1
+
+	measure 'Total Series' = CALCULATE ( [Total Contenidos], KEEPFILTERS ( Contenido[tipo] = "Serie" ) )
+		formatString: #,0
+		displayFolder: 01 Catálogo
+		lineageTag: 7bd3f013-9c79-4fb1-91ad-d2f200f73922
+
+	measure '% Películas' = DIVIDE ( [Total Películas], [Total Contenidos] )
+		formatString: 0.0%
+		displayFolder: 01 Catálogo
+		lineageTag: 6df54791-7211-4aeb-b4f6-f447f58914f3
+
+	measure '% Series' = DIVIDE ( [Total Series], [Total Contenidos] )
+		formatString: 0.0%
+		displayFolder: 01 Catálogo
+		lineageTag: 828afbb7-997c-4968-bbbe-69aac32d2a0f
+
+	measure 'Países Representados' = CALCULATE ( DISTINCTCOUNT ( Puente_Pais[pais] ), KEEPFILTERS ( Puente_Pais[pais] <> "Sin información" ) )
+		formatString: #,0
+		displayFolder: 01 Catálogo
+		lineageTag: ca229a32-faa0-4908-967e-4d9d9dd24d33
+
+	measure 'Idiomas Disponibles' = DISTINCTCOUNT ( Contenido[language] )
+		formatString: #,0
+		displayFolder: 01 Catálogo
+		lineageTag: b2c1f990-3af6-4fb9-9e35-85e2fb9b1386
+
+	measure Géneros = CALCULATE ( DISTINCTCOUNT ( Puente_Genero[genero] ), KEEPFILTERS ( Puente_Genero[genero] <> "Sin información" ) )
+		formatString: #,0
+		displayFolder: 01 Catálogo
+		lineageTag: 7e860fc4-16c6-4f1d-82cb-fe80d8501015
+
+	measure '% Contenido No Inglés' = DIVIDE ( CALCULATE ( [Total Contenidos], KEEPFILTERS ( Contenido[language] <> "en" ) ), [Total Contenidos] )
+		formatString: 0.0%
+		displayFolder: 01 Catálogo
+		lineageTag: 6dae146a-7740-40b9-b595-b6b923968f6e
+
+	measure 'Participación en Catálogo' = DIVIDE ( [Total Contenidos], CALCULATE ( [Total Contenidos], ALLSELECTED ( Puente_Genero ), ALLSELECTED ( Puente_Pais ), ALLSELECTED ( dim_Idioma ) ) )
+		formatString: 0.0%
+		displayFolder: 01 Catálogo
+		lineageTag: 55b384c9-a436-4cec-a485-2c5b5815a8d8
+
+	measure 'Popularidad Promedio' = AVERAGE ( Contenido[popularity] )
+		formatString: #,0.00
+		displayFolder: 02 Popularidad
+		lineageTag: c7a8a1a7-f6e6-4767-a67f-f1049b09a4fa
+
+	measure 'Popularidad Mediana' = MEDIAN ( Contenido[popularity] )
+		formatString: #,0.00
+		displayFolder: 02 Popularidad
+		lineageTag: 16fa5ebd-77db-4f78-86c7-4b50f53269de
+
+	measure 'Popularidad Mediana Año Anterior' = CALCULATE ( [Popularidad Mediana], DATEADD ( Calendario[Fecha], -1, YEAR ) )
+		formatString: #,0.00
+		displayFolder: 02 Popularidad
+		lineageTag: 12d0e673-c84c-46a5-babe-d07ecc3ff475
+
+	measure 'Var % Popularidad vs Año Anterior' = DIVIDE ( [Popularidad Mediana] - [Popularidad Mediana Año Anterior], [Popularidad Mediana Año Anterior] )
+		formatString: 0.0%
+		displayFolder: 02 Popularidad
+		lineageTag: 5672b76d-e311-46ef-939b-7af3530dfc6e
+
+	measure 'Calificación Promedio' = AVERAGE ( Contenido[valoracion] )
+		formatString: #,0.00
+		displayFolder: 03 Valoración
+		lineageTag: 9e2c1e28-ab50-4076-96f3-2b567649f57d
+
+	measure 'Valoración Ponderada' = AVERAGE ( Contenido[valoracion_ponderada] )
+		formatString: #,0.00
+		displayFolder: 03 Valoración
+		lineageTag: 73c1c745-8032-4863-8ecd-3118ab3adcf7
+
+	measure 'Total Votos' = SUM ( Contenido[vote_count] )
+		formatString: #,0
+		displayFolder: 03 Valoración
+		lineageTag: 3dcdcd7f-6eec-4d8e-85d6-4d011ee87eff
+
+	measure 'Contenidos con Votos' = CALCULATE ( [Total Contenidos], KEEPFILTERS ( Contenido[vote_count] > 0 ) )
+		formatString: #,0
+		displayFolder: 03 Valoración
+		lineageTag: 8183fc9f-719f-454e-8e23-c6a7cfdb2668
+
+	measure '% Alta Valoración' = DIVIDE ( CALCULATE ( [Total Contenidos], KEEPFILTERS ( Contenido[valoracion] >= 7 ) ), [Contenidos con Votos] )
+		formatString: 0.0%
+		displayFolder: 03 Valoración
+		lineageTag: 6ab80bc6-d18c-48a9-9187-1d83fbd036f3
+
+	measure '% Sin Votos' = DIVIDE ( [Total Contenidos] - [Contenidos con Votos], [Total Contenidos] )
+		formatString: 0.0%
+		displayFolder: 03 Valoración
+		lineageTag: 7cd20b7f-5845-4608-ae06-3a8b0d08e5ff
+
+	measure 'Contenidos Estrella' = CALCULATE ( [Total Contenidos], KEEPFILTERS ( Contenido[es_estrella] = TRUE () ) )
+		formatString: #,0
+		displayFolder: 03 Valoración
+		lineageTag: c4214ebe-9055-467a-b501-ad4c7e97b04f
+
+	measure '% Contenidos Estrella' = DIVIDE ( [Contenidos Estrella], [Total Contenidos] )
+		formatString: 0.0%
+		displayFolder: 03 Valoración
+		lineageTag: c6de1d64-beff-4115-8e3d-74619289f735
+
+	measure 'Películas con Datos Financieros' = CALCULATE ( [Total Contenidos], KEEPFILTERS ( Contenido[financiero_valido] = TRUE () ) )
+		formatString: #,0
+		displayFolder: 04 Financiero - sólo películas
+		lineageTag: 7e778ee6-5835-4600-bf44-c5fdab90bc46
+
+	measure 'Cobertura Financiera %' = DIVIDE ( [Películas con Datos Financieros], [Total Películas] )
+		formatString: 0.0%
+		displayFolder: 04 Financiero - sólo películas
+		lineageTag: 9f13d372-038f-4712-ada9-33528c4628c7
+
+	measure 'Presupuesto Total' = SUM ( Contenido[presupuesto_usd] )
+		formatString: $#,0
+		displayFolder: 04 Financiero - sólo películas
+		lineageTag: 5558970c-70aa-4903-bf64-76087af4e748
+
+	measure 'Ingresos Totales' = SUM ( Contenido[ingresos_usd] )
+		formatString: $#,0
+		displayFolder: 04 Financiero - sólo películas
+		lineageTag: db72ef7f-58aa-4876-b005-fa0fdd9867a6
+
+	measure 'Presupuesto Promedio' = AVERAGE ( Contenido[presupuesto_usd] )
+		formatString: $#,0
+		displayFolder: 04 Financiero - sólo películas
+		lineageTag: 70936d48-bed2-4ef6-ab1b-dd1795884393
+
+	measure 'Ingreso Promedio' = AVERAGE ( Contenido[ingresos_usd] )
+		formatString: $#,0
+		displayFolder: 04 Financiero - sólo películas
+		lineageTag: bc38bbb0-c1a2-412f-b966-501f98d93461
+
+	measure 'Ganancia Bruta' = [Ingresos Totales] - [Presupuesto Total]
+		formatString: $#,0
+		displayFolder: 04 Financiero - sólo películas
+		lineageTag: b56c3333-9bc2-42dd-8f8a-c88c73a73829
+
+	measure 'ROI Agregado' = DIVIDE ( [Ingresos Totales], [Presupuesto Total] )
+		formatString: 0.00"x"
+		displayFolder: 04 Financiero - sólo películas
+		lineageTag: dc0e2892-131b-4ae1-91a4-1754fc92d88c
+
+	measure 'ROI Mediano' = MEDIAN ( Contenido[roi] )
+		formatString: 0.00"x"
+		displayFolder: 04 Financiero - sólo películas
+		lineageTag: 027844a1-139e-4abf-83d4-ccc379d21b98
+
+	measure '% Películas Rentables' = DIVIDE ( CALCULATE ( [Total Contenidos], KEEPFILTERS ( Contenido[roi] > 1 ) ), [Películas con Datos Financieros] )
+		formatString: 0.0%
+		displayFolder: 04 Financiero - sólo películas
+		lineageTag: dcddeb68-103d-422a-8746-a69cee89031c
+
+	measure 'ROI Película' = IF ( HASONEVALUE ( Contenido[id_contenido] ), MAX ( Contenido[roi] ) )
+		formatString: 0.00"x"
+		displayFolder: 04 Financiero - sólo películas
+		lineageTag: efb97dcc-a720-446b-9680-5bb05ea25e89
+
+	measure 'Títulos por Director' = COUNTROWS ( Puente_Director )
+		formatString: #,0
+		displayFolder: 04b Producción
+		lineageTag: 6d46be6b-1c00-449b-a009-90feb103b903
+
+	measure 'Títulos por Actor' = COUNTROWS ( Puente_Actor )
+		formatString: #,0
+		displayFolder: 04b Producción
+		lineageTag: 8879fa1e-ad5a-4874-8f5b-1951ec261200
+
+	measure 'Texto Alcance' = VAR _a1 = MIN ( Contenido[anio_estreno] ) VAR _a2 = MAX ( Contenido[anio_estreno] ) VAR _tipo = IF ( HASONEVALUE ( Contenido[tipo] ), VALUES ( Contenido[tipo] ) & "s", "Películas y series" ) RETURN "Alcance: " & _tipo & "  ·  Estreno " & _a1 & "–" & _a2 & "  ·  " & FORMAT ( [Total Contenidos], "#,0" ) & " títulos"
+		displayFolder: 05 Textos dinámicos
+		lineageTag: 46f7250d-3570-4d29-8c78-56d125f7142f
+
+	measure 'Texto Alcance Financiero' = "Sólo películas con presupuesto e ingresos ≥ USD 10.000  ·  n = " & FORMAT ( [Películas con Datos Financieros], "#,0" ) & " (" & FORMAT ( [Cobertura Financiera %], "0.0%" ) & " de las películas)"
+		displayFolder: 05 Textos dinámicos
+		lineageTag: 20e4ad5b-3409-42ee-80ef-d0580c03ca1d
+
+	measure 'Texto Género Líder' = VAR _t = TOPN ( 1, FILTER ( VALUES ( Puente_Genero[genero] ), Puente_Genero[genero] <> "Sin información" ), [Total Contenidos], DESC ) RETURN "Género con más títulos: " & CONCATENATEX ( _t, Puente_Genero[genero], ", " )
+		displayFolder: 05 Textos dinámicos
+		lineageTag: ecb87d2a-0ee2-4df3-a507-1af5b53b3e02
+
+	measure 'Título Detalle' = SELECTEDVALUE ( Contenido[title], "Seleccione un título" )
+		displayFolder: 05 Textos dinámicos
+		lineageTag: d3527188-e8b4-4774-bdf7-368ee5ec2984
+
+	measure 'Color Valoración' = VAR _v = [Calificación Promedio] RETURN SWITCH ( TRUE (), ISBLANK ( _v ), "#B0B0B0", _v >= 7, "#1baf7a", _v >= 6, "#eda100", "#e34948" )
+		displayFolder: 06 Formato condicional
+		lineageTag: adabd720-d47d-43b5-bbd3-ee7c6a3fd57f
+
+	measure 'Color ROI' = IF ( [ROI Mediano] >= 1, "#1baf7a", "#e34948" )
+		displayFolder: 06 Formato condicional
+		lineageTag: a477b5eb-8724-47f9-bd6d-f5069419a973
+
+	measure 'KPI Total Contenidos' = FORMAT ( [Total Contenidos], "#,0" )
+		displayFolder: 00 KPI Tarjetas
+		lineageTag: 6382b715-2ee7-496f-ae58-33f61e516c09
+
+	measure 'KPI Total Películas' = FORMAT ( [Total Películas], "#,0" )
+		displayFolder: 00 KPI Tarjetas
+		lineageTag: ae4e15be-3c6b-48be-a9c1-7f13d02f0b08
+
+	measure 'KPI Total Series' = FORMAT ( [Total Series], "#,0" )
+		displayFolder: 00 KPI Tarjetas
+		lineageTag: db4b158c-2a56-4e8b-bca2-d0d1926bb29d
+
+	measure 'KPI Contenidos Estrella' = FORMAT ( [Contenidos Estrella], "#,0" )
+		displayFolder: 00 KPI Tarjetas
+		lineageTag: 390673d9-0e07-4bf7-bf35-e34e89a846bc
+
+	measure 'KPI Películas con Datos Financieros' = FORMAT ( [Películas con Datos Financieros], "#,0" )
+		displayFolder: 00 KPI Tarjetas
+		lineageTag: 7c3d1567-07c6-4e66-b9cf-eecab8a95b1b
+
+	measure 'KPI Presupuesto Total' = IF ( NOT ISBLANK ( [Presupuesto Total] ), "US$ " & FORMAT ( [Presupuesto Total] / 1000000, "#,0" ) & " M" )
+		displayFolder: 00 KPI Tarjetas
+		lineageTag: 59cf8056-6395-4c62-9482-9ca3f52f5a1c
+
+	measure 'KPI Ingresos Totales' = IF ( NOT ISBLANK ( [Ingresos Totales] ), "US$ " & FORMAT ( [Ingresos Totales] / 1000000, "#,0" ) & " M" )
+		displayFolder: 00 KPI Tarjetas
+		lineageTag: ea25b5d7-c386-47d2-94c5-2b8e5f44cb89
+
+	measure 'KPI Ganancia Bruta' = IF ( NOT ISBLANK ( [Ingresos Totales] ), "US$ " & FORMAT ( [Ganancia Bruta] / 1000000, "#,0" ) & " M" )
+		displayFolder: 00 KPI Tarjetas
+		lineageTag: 271af85f-3724-4c53-ad5c-a60d1db51f5d
+
+	measure '% Contenido Asiático' = DIVIDE ( CALCULATE ( [Total Contenidos], KEEPFILTERS ( dim_Idioma[grupo_idioma] = "Asiático" ) ), [Total Contenidos] )
+		formatString: 0.0%
+		displayFolder: 07 KPIs adicionales
+		lineageTag: 04addc13-f6fe-4fc8-a1c9-85f4be3627ad
+
+	measure '% Contenido Iberoamericano' = DIVIDE ( CALCULATE ( [Total Contenidos], KEEPFILTERS ( dim_Idioma[grupo_idioma] = "Español / Portugués" ) ), [Total Contenidos] )
+		formatString: 0.0%
+		displayFolder: 07 KPIs adicionales
+		lineageTag: 8c36b0f8-7da1-45ec-bc5f-9246e5c26baa
+
+	measure 'Brecha Valoración Serie vs Película' = CALCULATE ( [Calificación Promedio], Contenido[tipo] = "Serie" ) - CALCULATE ( [Calificación Promedio], Contenido[tipo] = "Película" )
+		formatString: +0.00;-0.00;0.00
+		displayFolder: 07 KPIs adicionales
+		lineageTag: 3ff86028-28d0-40c8-980f-2cc4f2ee8dec
+
+	measure 'Votos Promedio por Título' = DIVIDE ( [Total Votos], [Contenidos con Votos] )
+		formatString: #,0
+		displayFolder: 07 KPIs adicionales
+		lineageTag: 3e5722c6-45bd-496b-ab8e-53a3065c4b55
+
+	measure 'Margen Bruto %' = DIVIDE ( [Ganancia Bruta], [Ingresos Totales] )
+		formatString: 0.0%
+		displayFolder: 07 KPIs adicionales
+		lineageTag: 8759579e-6b67-4fc1-8c81-7c9fbd6dd848
+
+	measure '% Películas con Pérdida' = DIVIDE ( CALCULATE ( [Total Contenidos], KEEPFILTERS ( Contenido[roi] <= 1 ) ), [Películas con Datos Financieros] )
+		formatString: 0.0%
+		displayFolder: 07 KPIs adicionales
+		lineageTag: c6664704-2862-4da9-8b29-d5bfd7ebaf8f
+
+	measure 'Género Más Producido' = VAR _t = TOPN ( 1, FILTER ( VALUES ( Puente_Genero[genero] ), Puente_Genero[genero] <> "Sin información" ), [Total Contenidos], DESC ) RETURN MAXX ( _t, Puente_Genero[genero] )
+		displayFolder: 07 KPIs adicionales
+		lineageTag: 8226b3e3-1c03-4420-ad8f-f707b20ecd4d
+
+	measure 'Género Mejor Valorado' = VAR _t = TOPN ( 1, FILTER ( VALUES ( Puente_Genero[genero] ), Puente_Genero[genero] <> "Sin información" && [Contenidos con Votos] >= 100 ), [Calificación Promedio], DESC ) RETURN MAXX ( _t, Puente_Genero[genero] )
+		displayFolder: 07 KPIs adicionales
+		lineageTag: f50e3846-cec0-46e2-9cce-979c4553a352
+
+	measure 'País Líder' = VAR _t = TOPN ( 1, FILTER ( VALUES ( Puente_Pais[pais] ), Puente_Pais[pais] <> "Sin información" ), [Total Contenidos], DESC ) RETURN MAXX ( _t, Puente_Pais[pais] )
+		displayFolder: 07 KPIs adicionales
+		lineageTag: 1be7b428-4573-4c3c-998a-3c7241efb88d
+
+	measure 'Título Más Popular' = VAR _t = TOPN ( 1, VALUES ( Contenido[title] ), [Popularidad Promedio], DESC ) RETURN MAXX ( _t, Contenido[title] )
+		displayFolder: 07 KPIs adicionales
+		lineageTag: af767efa-6d87-449f-8fce-509e7e81a771
+
+	measure 'Película Mayor Ingreso' = VAR _t = TOPN ( 1, FILTER ( VALUES ( Contenido[title] ), NOT ISBLANK ( [Ingresos Totales] ) ), [Ingresos Totales], DESC ) RETURN MAXX ( _t, Contenido[title] )
+		displayFolder: 07 KPIs adicionales
+		lineageTag: 82187565-3b70-4681-807d-8f7509f3ce00
+
+	column x
+		dataType: string
+		isHidden
+		lineageTag: 7fa2a50c-f405-4e44-a265-a35cc4d12ee5
+		summarizeBy: none
+		sourceColumn: x
+
+	partition _Medidas = m
+		mode: import
+		source =
+				let
+				 Fuente = #table(type table [x = text], {})
+				in
+				 Fuente
+

@@ -1,0 +1,26 @@
+relationship rel_Genero
+	crossFilteringBehavior: bothDirections
+	fromColumn: Puente_Genero.id_contenido
+	toColumn: Contenido.id_contenido
+
+relationship rel_Pais
+	crossFilteringBehavior: bothDirections
+	fromColumn: Puente_Pais.id_contenido
+	toColumn: Contenido.id_contenido
+
+relationship rel_Director
+	fromColumn: Puente_Director.id_contenido
+	toColumn: Contenido.id_contenido
+
+relationship rel_Actor
+	fromColumn: Puente_Actor.id_contenido
+	toColumn: Contenido.id_contenido
+
+relationship rel_Idioma
+	fromColumn: Contenido.language
+	toColumn: dim_Idioma.codigo
+
+relationship rel_Calendario
+	fromColumn: Contenido.fecha_incorporacion
+	toColumn: Calendario.Fecha
+

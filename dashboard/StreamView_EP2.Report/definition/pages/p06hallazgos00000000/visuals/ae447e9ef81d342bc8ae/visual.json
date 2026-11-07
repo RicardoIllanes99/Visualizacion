@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ae447e9ef81d342bc8ae",
+  "position": {
+    "x": 810,
+    "y": 225,
+    "z": 21000,
+    "height": 335,
+    "width": 770,
+    "tabOrder": 21000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "2. ¿Por qué ocurre?",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#2A78D6",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "El inglés baja de 60,6 % a 54,9 % en películas y es minoritario en series. Crecen el contenido asiático e iberoamericano y géneros como Misterio, Terror y Ciencia Ficción.",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#0B0B0B"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

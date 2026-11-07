@@ -1,0 +1,19 @@
+# Configuración local de Power BI Desktop (se regenera en cada PC)
+**/.pbi/localSettings.json
+**/.pbi/editorSettings.json
+
+# Archivos temporales de Office
+~$*
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+
+# Node
+node_modules/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store

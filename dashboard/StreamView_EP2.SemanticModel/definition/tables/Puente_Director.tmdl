@@ -1,0 +1,28 @@
+table Puente_Director
+	lineageTag: 2b537f3a-8402-430e-b52f-535d928e416f
+
+	column id_contenido
+		dataType: string
+		isHidden
+		lineageTag: 0865454b-f175-4610-ae7d-c0070f0d3456
+		summarizeBy: none
+		sourceColumn: id_contenido
+
+	column director
+		dataType: string
+		lineageTag: 36e64deb-51f0-48da-a61c-88ab981ff4cc
+		summarizeBy: none
+		sourceColumn: director
+
+	partition Puente_Director = m
+		mode: import
+		source =
+				let
+				Base = Table.SelectRows(Table.SelectColumns(Contenido, {"id_contenido", "director"}), each [director] <> null),
+				Lista = Table.TransformColumns(Base, {{"director", each List.Transform(Text.Split(_, ","), Text.Trim)}}),
+				Expandida = Table.ExpandListColumn(Lista, "director"),
+				Tipo = Table.TransformColumnTypes(Expandida, {{"director", type text}}),
+				SinDuplicados = Table.Distinct(Tipo)
+				in
+				SinDuplicados
+

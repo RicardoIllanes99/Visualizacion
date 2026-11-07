@@ -1,0 +1,281 @@
+table Contenido
+	lineageTag: 0f556f84-a311-42e8-97de-2fed26c5bb0a
+
+	column show_id
+		dataType: int64
+		isHidden
+		lineageTag: 7b55623b-3d0e-4d63-aaf7-f4bffe77828d
+		summarizeBy: none
+		sourceColumn: show_id
+
+	column tipo_origen
+		dataType: string
+		isHidden
+		lineageTag: 22ada96d-781e-4b4b-aa25-e5340c8d653d
+		summarizeBy: none
+		sourceColumn: tipo_origen
+
+	column title
+		dataType: string
+		lineageTag: 5a92398f-082d-4d42-a734-bc25c6918f48
+		summarizeBy: none
+		sourceColumn: title
+
+	column director
+		dataType: string
+		lineageTag: 6f0d6ae1-89fb-4d72-bfcb-6edb5750566d
+		summarizeBy: none
+		sourceColumn: director
+
+	column cast
+		dataType: string
+		lineageTag: 4388702d-cab5-4cba-b6fc-2e460a8c682a
+		summarizeBy: none
+		sourceColumn: cast
+
+	column country
+		dataType: string
+		lineageTag: 2800849f-decd-4c70-a4f6-78bcb244949c
+		summarizeBy: none
+		sourceColumn: country
+
+	column fecha_incorporacion
+		dataType: dateTime
+		formatString: dd-mm-yyyy
+		lineageTag: f0af5ae3-bc85-4ba0-a294-1a8d85dbfbea
+		summarizeBy: none
+		sourceColumn: fecha_incorporacion
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio_estreno
+		dataType: int64
+		lineageTag: 14bbe633-fd61-4037-8e8f-e30b9296c60d
+		summarizeBy: none
+		sourceColumn: anio_estreno
+
+	column genres
+		dataType: string
+		lineageTag: 6fde32fa-bfdd-4341-9e03-589c4fa7f5ec
+		summarizeBy: none
+		sourceColumn: genres
+
+	column language
+		dataType: string
+		lineageTag: b9305a73-cd1d-4ba7-9679-f404afc082a3
+		summarizeBy: none
+		sourceColumn: language
+
+	column description
+		dataType: string
+		lineageTag: b29713b0-96ea-45d2-ba8d-66e333a15c47
+		summarizeBy: none
+		sourceColumn: description
+
+	column popularity
+		dataType: double
+		lineageTag: 04294451-7d47-482e-9a64-b8c6391a2049
+		summarizeBy: none
+		sourceColumn: popularity
+
+	column vote_count
+		dataType: int64
+		lineageTag: ab385a9b-c2d0-4a0d-8aa9-4d76aea0f72c
+		summarizeBy: sum
+		sourceColumn: vote_count
+
+	column vote_average
+		dataType: double
+		lineageTag: f360b9bb-e059-4e26-9d70-6513c07fcee2
+		summarizeBy: none
+		sourceColumn: vote_average
+
+	column budget
+		dataType: double
+		isHidden
+		lineageTag: f8127d24-a2a4-42b0-920a-01e2009327f2
+		sourceColumn: budget
+
+	column revenue
+		dataType: double
+		isHidden
+		lineageTag: 8556a152-ed3f-4452-9165-67dfeec94ba7
+		sourceColumn: revenue
+
+	column id_contenido
+		dataType: string
+		lineageTag: 297e97fb-2ec6-44fd-9ebe-40dd431dbdeb
+		summarizeBy: none
+		sourceColumn: id_contenido
+
+	column tipo
+		dataType: string
+		lineageTag: 5946219c-5db2-4563-9f0c-6eb5c61588b9
+		summarizeBy: none
+		sourceColumn: tipo
+
+	column pais_principal
+		dataType: string
+		lineageTag: 55e9576d-813c-47f0-985f-8e055d090755
+		summarizeBy: none
+		sourceColumn: pais_principal
+
+	column genero_principal
+		dataType: string
+		lineageTag: c8b7b8e0-f5af-438e-885d-5d4241d53af7
+		summarizeBy: none
+		sourceColumn: genero_principal
+
+	column valoracion
+		dataType: double
+		lineageTag: 18dae70a-a446-42c1-bf9f-3ce842233211
+		summarizeBy: none
+		sourceColumn: valoracion
+
+	column segmento_valoracion
+		dataType: string
+		lineageTag: 8aa67a90-0e1c-4b1f-aeee-ef94f15329a6
+		summarizeBy: none
+		sourceColumn: segmento_valoracion
+		sortByColumn: segmento_orden
+
+	column segmento_orden
+		dataType: int64
+		isHidden
+		lineageTag: 3f64ead8-944d-4db3-b622-22aa3e93d847
+		summarizeBy: none
+		sourceColumn: segmento_orden
+
+	column pop_mediana_tipo
+		dataType: double
+		isHidden
+		lineageTag: 28216097-3d05-4b72-8047-0d5a96a1f8b6
+		summarizeBy: none
+		sourceColumn: pop_mediana_tipo
+
+	column valoracion_ponderada
+		dataType: double
+		lineageTag: a38a6bb0-fc09-4ab4-a6c6-645a2948f2ca
+		summarizeBy: none
+		sourceColumn: valoracion_ponderada
+
+	column es_estrella
+		dataType: boolean
+		lineageTag: b0480fc6-ca62-42a4-9672-07737ab356e2
+		sourceColumn: es_estrella
+
+	column financiero_valido
+		dataType: boolean
+		lineageTag: 119980c5-9763-4fe9-ba85-5f281e2d7090
+		sourceColumn: financiero_valido
+
+	column presupuesto_usd
+		dataType: double
+		lineageTag: 6990c06c-32cd-4823-ad8c-e7473a94baa5
+		summarizeBy: none
+		sourceColumn: presupuesto_usd
+
+	column ingresos_usd
+		dataType: double
+		lineageTag: 4bf446d5-e97d-479f-9843-f6caea09fabc
+		summarizeBy: none
+		sourceColumn: ingresos_usd
+
+	column roi
+		dataType: double
+		lineageTag: cfff471d-99b6-4a67-a861-b409af971b21
+		summarizeBy: none
+		sourceColumn: roi
+
+	column tramo_presupuesto
+		dataType: string
+		lineageTag: d49a784c-4019-428f-8b75-13fd84511e50
+		summarizeBy: none
+		sourceColumn: tramo_presupuesto
+		sortByColumn: tramo_orden
+
+	column tramo_orden
+		dataType: int64
+		isHidden
+		lineageTag: 3ab14e22-f6cd-462d-b4f4-68f505064bb8
+		summarizeBy: none
+		sourceColumn: tramo_orden
+
+	partition Contenido = m
+		mode: import
+		source =
+				let
+				Union = Table.Combine({src_Peliculas, src_Series}),
+				Renombrar = Table.RenameColumns(Union, {{"type", "tipo_origen"}}),
+				ConId = Table.AddColumn(Renombrar, "id_contenido", each
+				(if [tipo_origen] = "Movie" then "M-" else "T-") & Text.From([show_id]), type text),
+				SinDuplicados = Table.Distinct(ConId, {"id_contenido"}),
+				Limpio = Table.TransformColumns(SinDuplicados, {
+				{"title", Text.Trim, type text}, {"director", Text.Trim, type nullable text},
+				{"cast", Text.Trim, type nullable text}, {"country", Text.Trim, type nullable text},
+				{"genres", Text.Trim, type nullable text}, {"language", Text.Trim, type text}
+				}),
+				Tipo = Table.AddColumn(Limpio, "tipo", each
+				if [tipo_origen] = "Movie" then "Película" else "Serie", type text),
+				PaisPrincipal = Table.AddColumn(Tipo, "pais_principal", each
+				if [country] = null then "Sin información"
+				else Text.Trim(List.First(Text.Split([country], ","))), type text),
+				GeneroPrincipal = Table.AddColumn(PaisPrincipal, "genero_principal", each
+				Record.FieldOrDefault(map_Generos,
+				if [genres] = null then "Unknown" else Text.Trim(List.First(Text.Split([genres], ","))),
+				"Sin información"), type text),
+				Valoracion = Table.AddColumn(GeneroPrincipal, "valoracion", each
+				if [vote_count] > 0 then [vote_average] else null, type nullable number),
+				Segmento = Table.AddColumn(Valoracion, "segmento_valoracion", each
+				if [vote_count] = 0 then "Sin votos"
+				else if [vote_average] >= 8 then "Excelente (≥8)"
+				else if [vote_average] >= 7 then "Alta (7–7,9)"
+				else if [vote_average] >= 5 then "Media (5–6,9)"
+				else "Baja (<5)", type text),
+				SegmentoOrden = Table.AddColumn(Segmento, "segmento_orden", each
+				if [segmento_valoracion] = "Excelente (≥8)" then 1
+				else if [segmento_valoracion] = "Alta (7–7,9)" then 2
+				else if [segmento_valoracion] = "Media (5–6,9)" then 3
+				else if [segmento_valoracion] = "Baja (<5)" then 4 else 5, Int64.Type),
+				Stats = Table.Group(SegmentoOrden, {"tipo"}, {
+				{"C_tipo", each List.Average(List.RemoveNulls([valoracion])), type number},
+				{"pop_mediana_tipo", each List.Median([popularity]), type number}
+				}),
+				Unido = Table.NestedJoin(SegmentoOrden, {"tipo"}, Stats, {"tipo"}, "st", JoinKind.LeftOuter),
+				Expandido = Table.ExpandTableColumn(Unido, "st", {"C_tipo", "pop_mediana_tipo"}),
+				Ponderada = Table.AddColumn(Expandido, "valoracion_ponderada", each
+				([vote_count] / ([vote_count] + 200)) * (if [vote_count] > 0 then [vote_average] else 0)
+				+ (200 / ([vote_count] + 200)) * [C_tipo], type number),
+				Estrella = Table.AddColumn(Ponderada, "es_estrella", each
+				[valoracion] <> null and [valoracion] >= 7 and [vote_count] >= 50
+				and [popularity] >= [pop_mediana_tipo], type logical),
+				Financiero = Table.AddColumn(Estrella, "financiero_valido", each
+				[tipo_origen] = "Movie" and [budget] <> null and [revenue] <> null
+				and [budget] >= 10000 and [revenue] >= 10000, type logical),
+				Presupuesto = Table.AddColumn(Financiero, "presupuesto_usd", each
+				if [financiero_valido] then [budget] else null, type nullable number),
+				Ingresos = Table.AddColumn(Presupuesto, "ingresos_usd", each
+				if [financiero_valido] then [revenue] else null, type nullable number),
+				ROI = Table.AddColumn(Ingresos, "roi", each
+				if [financiero_valido] then [revenue] / [budget] else null, type nullable number),
+				Tramo = Table.AddColumn(ROI, "tramo_presupuesto", each
+				if not [financiero_valido] then null
+				else if [budget] < 5000000 then "< 5M"
+				else if [budget] < 20000000 then "5–20M"
+				else if [budget] < 60000000 then "20–60M"
+				else "> 60M", type nullable text),
+				TramoOrden = Table.AddColumn(Tramo, "tramo_orden", each
+				if [tramo_presupuesto] = "< 5M" then 1
+				else if [tramo_presupuesto] = "5–20M" then 2
+				else if [tramo_presupuesto] = "20–60M" then 3
+				else if [tramo_presupuesto] = "> 60M" then 4 else null, Int64.Type),
+				Nombres = Table.RenameColumns(TramoOrden, {
+				{"date_added", "fecha_incorporacion"}, {"release_year", "anio_estreno"}}),
+				Final = Table.RemoveColumns(Nombres, {"C_tipo"})
+				in
+				Final
+
+	annotation PBI_ResultType = Table
+

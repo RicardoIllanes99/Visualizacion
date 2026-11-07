@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "877a4a127c13d175b237",
+  "position": {
+    "x": 20,
+    "y": 225,
+    "z": 19000,
+    "height": 335,
+    "width": 770,
+    "tabOrder": 19000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "1. ¿Qué está ocurriendo?",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#2A78D6",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "El catálogo suma 31.991 títulos (50 % películas, 50 % series) de 147 países y 83 idiomas. El volumen es constante (2.000 títulos por año), por lo que el cambio relevante está en la composición.",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#0B0B0B"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

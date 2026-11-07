@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "c5024d4160309f618c88",
+  "position": {
+    "x": 20,
+    "y": 650,
+    "z": 23000,
+    "height": 335,
+    "width": 770,
+    "tabOrder": 23000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "3. ¿Qué evidencia lo demuestra?",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#2A78D6",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Japonés (7,20) y chino (7,07) superan en nota al inglés (6,45). Animación es el único género popular y bien evaluado en películas, con ROI mediano 2,29x y 24,4 % de contenidos estrella.",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#0B0B0B"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

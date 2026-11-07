@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.1.0/schema.json",
+  "pageOrder": [
+    "p01resumen0000000000",
+    "p02catalogo000000000",
+    "p03popularidad000000",
+    "p04tendencias0000000",
+    "p05financiero0000000",
+    "p06hallazgos00000000"
+  ],
+  "activePageName": "p01resumen0000000000"
+}

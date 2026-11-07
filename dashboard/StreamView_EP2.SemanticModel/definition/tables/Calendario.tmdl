@@ -1,0 +1,57 @@
+table Calendario
+	lineageTag: 0b0ccbd4-51f9-49c7-be8d-e65a3fd6748e
+	dataCategory: Time
+
+	column Fecha
+		dataType: dateTime
+		isKey
+		formatString: dd-mm-yyyy
+		lineageTag: 3a7c20c1-4d7f-4a4a-ab7c-71e2f16ef426
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año
+		dataType: int64
+		lineageTag: 76d94f3e-88e8-4d5d-8c9d-8e71f6cd1b9a
+		summarizeBy: none
+		sourceColumn: Año
+
+	column 'Mes N'
+		dataType: int64
+		isHidden
+		lineageTag: 0a3a246a-100c-40b2-9ce3-0b65c28ad644
+		summarizeBy: none
+		sourceColumn: Mes N
+
+	column Mes
+		dataType: string
+		lineageTag: 8ab168ae-9b8b-4dc3-9869-21f4c1d90a75
+		summarizeBy: none
+		sourceColumn: Mes
+		sortByColumn: 'Mes N'
+
+	column Trimestre
+		dataType: string
+		lineageTag: 16998aef-6017-4f98-ab0a-98f46043ecc4
+		summarizeBy: none
+		sourceColumn: Trimestre
+
+	partition Calendario = m
+		mode: import
+		source =
+				let
+				 Inicio = #date(2010, 1, 1),
+				 Fin = #date(2025, 12, 31),
+				 Fechas = List.Dates(Inicio, Duration.Days(Fin - Inicio) + 1, #duration(1, 0, 0, 0)),
+				 Tabla = Table.FromList(Fechas, Splitter.SplitByNothing(), type table [Fecha = date]),
+				 Anio = Table.AddColumn(Tabla, "Año", each Date.Year([Fecha]), Int64.Type),
+				 MesN = Table.AddColumn(Anio, "Mes N", each Date.Month([Fecha]), Int64.Type),
+				 Mes = Table.AddColumn(MesN, "Mes", each Text.Proper(Date.ToText([Fecha], [Format = "MMM", Culture = "es-CL"])), type text),
+				 Trim = Table.AddColumn(Mes, "Trimestre", each "T" & Text.From(Date.QuarterOfYear([Fecha])), type text)
+				in
+				 Trim
+

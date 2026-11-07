@@ -1,0 +1,126 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 852.46183999492791,
+            "y": 258.23313056601631
+          },
+          "nodeIndex": "_Medidas",
+          "nodeLineageTag": "c6ae692f-f5af-4783-99dc-14a09eaed590",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 618.46183999492791,
+            "y": 136.23569856139483
+          },
+          "nodeIndex": "Calendario",
+          "nodeLineageTag": "0b0ccbd4-51f9-49c7-be8d-e65a3fd6748e",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334.235213623843,
+            "y": 224.66546997764573
+          },
+          "nodeIndex": "Contenido",
+          "nodeLineageTag": "0f556f84-a311-42e8-97de-2fed26c5bb0a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334.25250372435147,
+            "y": -50
+          },
+          "nodeIndex": "dim_Idioma",
+          "nodeLineageTag": "e26c8ba2-9998-446e-b957-7c24b5ee6ba0",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50.034816614203237,
+            "y": 95.597756019854614
+          },
+          "nodeIndex": "Puente_Actor",
+          "nodeLineageTag": "78f2a83a-09f2-40cd-9f78-eccfe97e37ff",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334.204733805212,
+            "y": 638.46626113203274
+          },
+          "nodeIndex": "Puente_Director",
+          "nodeLineageTag": "2b537f3a-8402-430e-b52f-535d928e416f",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 618.42860099627842,
+            "y": 532.18690948206074
+          },
+          "nodeIndex": "Puente_Genero",
+          "nodeLineageTag": "d5745557-6af0-4c27-a346-126f6f14e0ed",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 408.20584941353638
+          },
+          "nodeIndex": "Puente_Pais",
+          "nodeLineageTag": "d1c6bc72-c106-4c25-8440-5e124caa8ae1",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

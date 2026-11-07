@@ -1,0 +1,29 @@
+table Puente_Actor
+	lineageTag: 78f2a83a-09f2-40cd-9f78-eccfe97e37ff
+
+	column id_contenido
+		dataType: string
+		isHidden
+		lineageTag: a83debb6-1212-4fc1-9487-eee483d734dd
+		summarizeBy: none
+		sourceColumn: id_contenido
+
+	column actor
+		dataType: string
+		lineageTag: 2cd66da2-ef4a-48f7-a059-545d570b9fa4
+		summarizeBy: none
+		sourceColumn: actor
+
+	partition Puente_Actor = m
+		mode: import
+		source =
+				let
+				Base = Table.SelectRows(Table.SelectColumns(Contenido, {"id_contenido", "cast"}), each [cast] <> null),
+				Lista = Table.TransformColumns(Base, {{"cast", each List.Transform(Text.Split(_, ","), Text.Trim)}}),
+				Expandida = Table.ExpandListColumn(Lista, "cast"),
+				Renombrada = Table.RenameColumns(Expandida, {{"cast", "actor"}}),
+				Tipo = Table.TransformColumnTypes(Renombrada, {{"actor", type text}}),
+				SinDuplicados = Table.Distinct(Tipo)
+				in
+				SinDuplicados
+

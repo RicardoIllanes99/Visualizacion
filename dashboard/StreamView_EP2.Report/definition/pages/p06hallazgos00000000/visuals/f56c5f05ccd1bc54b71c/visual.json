@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "f56c5f05ccd1bc54b71c",
+  "position": {
+    "x": 810,
+    "y": 650,
+    "z": 25000,
+    "height": 335,
+    "width": 770,
+    "tabOrder": 25000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "4. ¿Qué decisiones tomar?",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#2A78D6",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Adquirir Animación/Familiar y contenido asiático e iberoamericano; promocionar los contenidos estrella; usar Terror como apuesta de bajo costo; evitar el tramo de inversión USD 5–20 M sin respaldo de demanda.",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "color": "#0B0B0B"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

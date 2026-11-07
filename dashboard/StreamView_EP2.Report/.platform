@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "StreamView_EP2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "eb51a84c-dd3d-47e1-a152-21ec89b9cbf5"
+  }
+}

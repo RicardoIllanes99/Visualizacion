@@ -1,0 +1,26 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-CL
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode"]
+
+annotation PBI_QueryOrder = ["Contenido","dim_Idioma","Puente_Genero","Puente_Pais","Puente_Director","Puente_Actor","Calendario","_Medidas","RutaDatos","map_Generos","src_Peliculas","src_Series"]
+
+ref table Contenido
+ref table dim_Idioma
+ref table Puente_Genero
+ref table Puente_Pais
+ref table Puente_Director
+ref table Puente_Actor
+ref table Calendario
+ref table _Medidas
+
+ref cultureInfo es-ES
+

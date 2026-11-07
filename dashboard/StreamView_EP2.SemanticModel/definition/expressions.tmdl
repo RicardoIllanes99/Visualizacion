@@ -1,0 +1,94 @@
+expression RutaDatos = "C:\Users\Administrador\Desktop\StreamView_Final\data\raw\" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+	lineageTag: c163ca35-e544-4c0e-87b6-e97d050e36b1
+
+	annotation PBI_ResultType = Text
+
+expression map_Generos =
+		let
+		Mapa = [
+		Drama = "Drama",
+		Comedy = "Comedia",
+		Animation = "Animación",
+		Thriller = "Suspenso",
+		Action = "Acción y Aventura",
+		Adventure = "Acción y Aventura",
+		#"Action & Adventure" = "Acción y Aventura",
+		Crime = "Crimen",
+		Family = "Familiar",
+		Mystery = "Misterio",
+		Romance = "Romance",
+		Horror = "Terror",
+		#"Science Fiction" = "Ciencia Ficción y Fantasía",
+		Fantasy = "Ciencia Ficción y Fantasía",
+		#"Sci-Fi & Fantasy" = "Ciencia Ficción y Fantasía",
+		Documentary = "Documental",
+		Reality = "Reality",
+		Kids = "Infantil",
+		History = "Historia",
+		Talk = "Talk Show",
+		Soap = "Telenovela",
+		#"TV Movie" = "Película para TV",
+		Music = "Música",
+		War = "Bélico y Política",
+		#"War & Politics" = "Bélico y Política",
+		Western = "Western",
+		News = "Noticias",
+		Unknown = "Sin información"
+		]
+		in
+		Mapa
+	lineageTag: 44f325b8-fb00-4c24-9496-0ce8681f3c98
+
+expression src_Peliculas =
+		let
+		Origen = Csv.Document(
+		File.Contents(RutaDatos & "netflix_movies_detailed_up_to_2025.csv"),
+		[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+		),
+		Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+		VaciosANulo = Table.ReplaceValue(Encabezados, "", null, Replacer.ReplaceValue,
+		{"director", "cast", "country", "genres", "description"}),
+		Tipos = Table.TransformColumnTypes(VaciosANulo, {
+		{"show_id", Int64.Type}, {"type", type text}, {"title", type text},
+		{"director", type text}, {"cast", type text}, {"country", type text},
+		{"date_added", type date}, {"release_year", Int64.Type},
+		{"genres", type text}, {"language", type text}, {"description", type text},
+		{"popularity", type number}, {"vote_count", Int64.Type},
+		{"vote_average", type number}, {"budget", type number}, {"revenue", type number}
+		}, "en-US"),
+		Seleccion = Table.SelectColumns(Tipos, {
+		"show_id", "type", "title", "director", "cast", "country", "date_added",
+		"release_year", "genres", "language", "description", "popularity",
+		"vote_count", "vote_average", "budget", "revenue"
+		})
+		in
+		Seleccion
+	lineageTag: b4ee8054-95ac-4efc-a292-a93300ecd67b
+
+expression src_Series =
+		let
+		Origen = Csv.Document(
+		File.Contents(RutaDatos & "netflix_tv_shows_detailed_up_to_2025.csv"),
+		[Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
+		),
+		Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+		VaciosANulo = Table.ReplaceValue(Encabezados, "", null, Replacer.ReplaceValue,
+		{"director", "cast", "country", "genres", "description"}),
+		Tipos = Table.TransformColumnTypes(VaciosANulo, {
+		{"show_id", Int64.Type}, {"type", type text}, {"title", type text},
+		{"director", type text}, {"cast", type text}, {"country", type text},
+		{"date_added", type date}, {"release_year", Int64.Type},
+		{"genres", type text}, {"language", type text}, {"description", type text},
+		{"popularity", type number}, {"vote_count", Int64.Type}, {"vote_average", type number}
+		}, "en-US"),
+		Seleccion = Table.SelectColumns(Tipos, {
+		"show_id", "type", "title", "director", "cast", "country", "date_added",
+		"release_year", "genres", "language", "description", "popularity",
+		"vote_count", "vote_average"
+		}),
+		ConBudget = Table.AddColumn(Seleccion, "budget", each null, type nullable number),
+		ConRevenue = Table.AddColumn(ConBudget, "revenue", each null, type nullable number)
+		in
+		ConRevenue
+	lineageTag: 05ca44a0-eb13-416a-be45-621b2618d227
+

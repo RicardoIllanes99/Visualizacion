@@ -1,0 +1,22 @@
+// ===================================================================
+// TABLAS CALCULADAS  (Modelado > Nueva tabla > pegar cada bloque)
+// ===================================================================
+
+// ---- 1) Calendario (luego: Herramientas de tabla > Marcar como tabla de fechas > columna Fecha)
+Calendario =
+ADDCOLUMNS (
+    CALENDAR ( DATE ( 2010, 1, 1 ), DATE ( 2025, 12, 31 ) ),
+    "Fecha", [Date],
+    "Año", YEAR ( [Date] ),
+    "Mes N", MONTH ( [Date] ),
+    "Mes", FORMAT ( [Date], "mmm" ),
+    "Trimestre", "T" & QUARTER ( [Date] ),
+    "Año-Mes", FORMAT ( [Date], "yyyy-mm" )
+)
+// Ordenar columna "Mes" por "Mes N" (Herramientas de columna > Ordenar por columna)
+// Puedes ocultar la columna [Date] y usar [Fecha].
+
+// ---- 2) Tabla vacía para agrupar las medidas
+_Medidas = ROW ( "x", BLANK () )
+// Después de crear las medidas en esta tabla, oculta la columna "x":
+// la tabla queda arriba en el panel de Datos con ícono de calculadora.

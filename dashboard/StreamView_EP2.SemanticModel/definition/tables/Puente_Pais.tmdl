@@ -1,0 +1,31 @@
+table Puente_Pais
+	lineageTag: d1c6bc72-c106-4c25-8440-5e124caa8ae1
+
+	column id_contenido
+		dataType: string
+		isHidden
+		lineageTag: 07dbf9c2-ff5f-4c05-8146-2640889d8926
+		summarizeBy: none
+		sourceColumn: id_contenido
+
+	column pais
+		dataType: string
+		lineageTag: a83ef5ec-8763-40ec-a9f5-bb0077405738
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: pais
+
+	partition Puente_Pais = m
+		mode: import
+		source =
+				let
+				Base = Table.SelectColumns(Contenido, {"id_contenido", "country"}),
+				Lista = Table.TransformColumns(Base, {{"country", each
+				if _ = null then {"Sin información"} else List.Transform(Text.Split(_, ","), Text.Trim)}}),
+				Expandida = Table.ExpandListColumn(Lista, "country"),
+				Renombrada = Table.RenameColumns(Expandida, {{"country", "pais"}}),
+				Tipo = Table.TransformColumnTypes(Renombrada, {{"pais", type text}}),
+				SinDuplicados = Table.Distinct(Tipo)
+				in
+				SinDuplicados
+

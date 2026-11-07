@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "44bf1806b2d4ce6d7c89",
+  "position": {
+    "x": 694.5714285714286,
+    "y": 100,
+    "z": 17000,
+    "height": 110,
+    "width": 210.85714285714286,
+    "tabOrder": 17000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "KPI Contenidos Estrella"
+                }
+              },
+              "queryRef": "_Medidas.KPI Contenidos Estrella",
+              "nativeQueryRef": "Contenidos estrella",
+              "displayName": "Contenidos estrella"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

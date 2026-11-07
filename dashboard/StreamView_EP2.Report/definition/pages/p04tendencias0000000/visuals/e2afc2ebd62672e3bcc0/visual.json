@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "e2afc2ebd62672e3bcc0",
+  "position": {
+    "x": 1331.666666666667,
+    "y": 100,
+    "z": 19000,
+    "height": 110,
+    "width": 248.33333333333334,
+    "tabOrder": 19000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Género Mejor Valorado"
+                }
+              },
+              "queryRef": "_Medidas.Género Mejor Valorado",
+              "nativeQueryRef": "Género mejor valorado",
+              "displayName": "Género mejor valorado"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

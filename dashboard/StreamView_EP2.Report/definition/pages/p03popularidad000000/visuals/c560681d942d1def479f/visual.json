@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "c560681d942d1def479f",
+  "position": {
+    "x": 1369.142857142857,
+    "y": 100,
+    "z": 20000,
+    "height": 110,
+    "width": 210.85714285714286,
+    "tabOrder": 20000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Brecha Valoración Serie vs Película"
+                }
+              },
+              "queryRef": "_Medidas.Brecha Valoración Serie vs Película",
+              "nativeQueryRef": "Brecha nota serie − película",
+              "displayName": "Brecha nota serie − película"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

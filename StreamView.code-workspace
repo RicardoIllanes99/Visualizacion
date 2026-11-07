@@ -1,0 +1,74 @@
+{
+  "folders": [
+    {
+      "name": "StreamView Analytics",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.encoding": "utf8",
+    "files.eol": "\r\n",
+    "files.associations": {
+      "*.tmdl": "tmdl",
+      "*.m": "powerquery",
+      "*.dax": "dax",
+      "*.pbir": "json",
+      "*.pbism": "json",
+      "*.pbip": "json"
+    },
+    "files.exclude": {
+      "**/.pbi/cache.abf": true,
+      "**/__pycache__": true,
+      "**/.ipynb_checkpoints": true
+    },
+    "search.exclude": {
+      "data/raw/**": true,
+      "**/StreamView_EP2.Report/definition/pages/**": true
+    },
+    "python.defaultInterpreterPath": "python",
+    "jupyter.notebookFileRoot": "${workspaceFolder}/notebooks",
+    "markdown.preview.breaks": true
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Abrir dashboard en Power BI",
+        "type": "shell",
+        "command": "start \"\" \"${workspaceFolder}\\dashboard\\StreamView_EP2.pbip\"",
+        "options": {
+          "shell": {
+            "executable": "cmd.exe",
+            "args": [
+              "/d",
+              "/c"
+            ]
+          }
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Instalar dependencias de Python",
+        "type": "shell",
+        "command": "python -m pip install -r requirements.txt",
+        "problemMatcher": []
+      },
+      {
+        "label": "Regenerar KPIs de validación y gráficos",
+        "type": "shell",
+        "command": "python src/eda_streamview.py; python src/diagramas.py",
+        "problemMatcher": []
+      }
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "analysis-services.TMDL",
+      "ms-python.python",
+      "ms-toolsai.jupyter",
+      "mechatroner.rainbow-csv",
+      "yzhang.markdown-all-in-one",
+      "github.vscode-pull-request-github"
+    ]
+  }
+}
